@@ -1,0 +1,28 @@
+{
+  "stage": 4,
+  "shared_html": "shared/index.html",
+  "shared_css": [
+    "shared/css/app.css",
+    "shared/css/platform.css"
+  ],
+  "shared_js": [
+    "shared/js/platform-adapter.js",
+    "shared/js/platform-bridge.js",
+    "shared/js/app-core.js",
+    "shared/js/module-02.js",
+    "shared/js/client-card-fixes.js",
+    "shared/js/partners-core.js",
+    "shared/js/partners-referral-success.js",
+    "shared/js/partners-register-code.js",
+    "shared/js/partners-modal-fixes.js",
+    "shared/js/partners-admin.js",
+    "shared/js/partners-withdraw-fix.js",
+    "shared/js/partners-withdraw-success.js",
+    "shared/js/partners-status.js",
+    "shared/js/partners-history.js",
+    "shared/js/partners-auto-refresh.js",
+    "shared/js/partners-auto-refresh-2.js",
+    "shared/js/partners-tabs.js"
+  ],
+  "principle": "The shared HTML references common CSS/JS. Platform-specific native code stays outside shared."
+}

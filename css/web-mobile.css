@@ -1,0 +1,336 @@
+/* Gestor PRO Web Mobile / PWA
+   A Web continua com o layout desktop acima de 820px e assume
+   uma interface de aplicativo em telas menores. */
+
+html.gp-platform-web{
+  min-height:100%;
+  background:#06151d;
+}
+
+html.gp-platform-web body{
+  min-height:100%;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+/* Respeita áreas seguras de celulares com notch/barra de gestos. */
+@supports (padding: max(0px)){
+  html.gp-platform-web body{
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+  }
+}
+
+@media (max-width:820px){
+  html.gp-platform-web body{
+    padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))!important;
+    background:#06151d!important;
+    overflow-x:hidden!important;
+  }
+
+  html.gp-platform-web .wrap{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:14px 12px calc(96px + env(safe-area-inset-bottom,0px))!important;
+  }
+
+  html.gp-platform-web header{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0 0 12px!important;
+    padding:6px 2px 8px!important;
+  }
+  html.gp-platform-web header>div:first-child{min-width:0!important}
+  html.gp-platform-web .title-row{gap:10px!important;justify-content:flex-start!important}
+  html.gp-platform-web .logo-mark-real{width:42px!important;height:42px!important;min-width:42px!important;border-radius:12px!important}
+  html.gp-platform-web .title-row h1{font-size:28px!important;line-height:1!important;letter-spacing:-.035em!important;white-space:nowrap!important}
+  html.gp-platform-web .subtitle{margin-top:5px!important;font-size:11px!important;line-height:1.35!important;color:#91aaa9!important}
+  html.gp-platform-web .datetime-stack{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;min-width:0!important}
+  html.gp-platform-web .datetime{display:none!important}
+  html.gp-platform-web .account-chip{min-width:0!important;padding:5px!important;border-radius:12px!important}
+  html.gp-platform-web .account-copy{display:none!important}
+  html.gp-platform-web .account-avatar{width:34px!important;height:34px!important;min-width:34px!important}
+  html.gp-platform-web .logout-btn{width:32px!important;height:32px!important}
+
+  html.gp-platform-web .executive-welcome{display:block!important;padding:14px!important;margin-bottom:10px!important;border-radius:14px!important}
+  html.gp-platform-web .executive-welcome h2{font-size:18px!important}
+  html.gp-platform-web .executive-welcome p{font-size:11px!important;line-height:1.45!important}
+  html.gp-platform-web .executive-new-client{width:100%!important;margin-top:12px!important}
+
+  html.gp-platform-web .stats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;margin-bottom:12px!important}
+  html.gp-platform-web .stats .stat{min-width:0!important;min-height:104px!important;padding:13px!important;border-radius:13px!important}
+  html.gp-platform-web .stats .stat-value{font-size:24px!important}
+  html.gp-platform-web .stats .stat-label{font-size:9px!important}
+  html.gp-platform-web .stats .stat-detail{font-size:9.5px!important}
+  html.gp-platform-web .stats .stat-revenue{grid-column:1/-1!important;min-height:90px!important}
+
+  html.gp-platform-web .gp-today{padding:14px!important;margin-bottom:12px!important;border-radius:15px!important}
+  html.gp-platform-web .gp-today-head{display:flex!important;flex-direction:row!important;align-items:flex-start!important;justify-content:space-between!important;gap:10px!important}
+  html.gp-platform-web .gp-today-title{align-items:flex-start!important}
+  html.gp-platform-web .gp-today-title h2{font-size:16px!important}
+  html.gp-platform-web .gp-today-title p{font-size:10.5px!important}
+  html.gp-platform-web .gp-today-score{flex:0 0 auto!important;text-align:right!important}
+  html.gp-platform-web .gp-today-score strong{font-size:21px!important}
+  html.gp-platform-web .gp-today-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  html.gp-platform-web .gp-today-item{min-height:84px!important;padding:11px!important}
+
+  html.gp-platform-web .card,
+  html.gp-platform-web .agenda-card,
+  html.gp-platform-web .billing-section,
+  html.gp-platform-web .admin-zone{border-radius:14px!important}
+
+  /* Menu vira barra inferior, como aplicativo. */
+  html.gp-platform-web .side-nav{
+    left:10px!important;
+    right:10px!important;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;
+    top:auto!important;
+    transform:none!important;
+    width:auto!important;
+    max-width:none!important;
+    height:62px!important;
+    min-height:62px!important;
+    padding:6px!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:3px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    border-radius:17px!important;
+    background:rgba(5,25,29,.97)!important;
+    backdrop-filter:blur(18px)!important;
+    -webkit-backdrop-filter:blur(18px)!important;
+    box-shadow:0 14px 35px rgba(0,0,0,.42)!important;
+    scrollbar-width:none!important;
+  }
+  html.gp-platform-web .side-nav::-webkit-scrollbar{display:none!important}
+  html.gp-platform-web .side-nav-brand,
+  html.gp-platform-web .nav-separator,
+  html.gp-platform-web .menu-group-label{display:none!important}
+  html.gp-platform-web .side-nav .nav-item{width:48px!important;min-width:48px!important;height:48px!important;min-height:48px!important;padding:0!important;margin:0!important;display:grid!important;place-items:center!important;border-radius:12px!important;box-shadow:none!important}
+  html.gp-platform-web .side-nav .nav-text{display:none!important}
+  html.gp-platform-web .side-nav .nav-item.active{background:rgba(53,214,194,.12)!important;box-shadow:inset 0 -3px 0 #35d6c2!important}
+  html.gp-platform-web .side-nav .nav-item::after{display:none!important}
+
+  html.gp-platform-web .partner-nav-cta{width:48px!important;min-width:48px!important;height:48px!important;min-height:48px!important;padding:0!important;margin:0!important;display:grid!important;place-items:center!important;border-radius:12px!important;flex:0 0 48px!important}
+  html.gp-platform-web .partner-nav-icon{width:32px!important;height:32px!important;min-width:32px!important;margin:0!important}
+  html.gp-platform-web .partner-nav-copy{display:none!important}
+  html.gp-platform-web .gp-today-panel{display:none!important}
+
+  /* Login PWA sem overflow e sem depender de altura fixa. */
+  html.gp-platform-web .auth-gate{min-height:100dvh!important;padding:14px!important;background:radial-gradient(480px 360px at 10% 5%,rgba(53,214,194,.10),transparent 70%),#06151d!important}
+  html.gp-platform-web .auth-shell{width:100%!important;min-height:0!important;max-height:none!important;display:block!important;border-radius:18px!important;overflow:hidden!important}
+  html.gp-platform-web .auth-brand{display:none!important}
+  html.gp-platform-web .auth-panel{width:100%!important;min-height:calc(100dvh - 28px)!important;padding:24px 18px!important;display:flex!important;align-items:center!important}
+  html.gp-platform-web .auth-form-wrap{width:100%!important;max-width:480px!important;margin:auto!important}
+  html.gp-platform-web .auth-form-title{font-size:25px!important}
+  html.gp-platform-web .auth-form-subtitle{font-size:12px!important}
+  html.gp-platform-web .auth-field input{min-height:46px!important;font-size:16px!important}
+  html.gp-platform-web .auth-submit{min-height:48px!important}
+
+  /* Tabelas extensas continuam utilizáveis por rolagem horizontal. */
+  html.gp-platform-web .admin-table,
+  html.gp-platform-web .table-wrap{max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+
+  /* Modais nunca ultrapassam a tela do celular. */
+  html.gp-platform-web .modal-box,
+  html.gp-platform-web .admin-modal-box{max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 24px)!important;overflow:auto!important}
+}
+
+@media(max-width:560px){
+  html.gp-platform-web .agenda-head{align-items:flex-start!important;flex-direction:column!important}
+  html.gp-platform-web .agenda-summary{text-align:left!important}
+  html.gp-platform-web .toolbar{flex-wrap:wrap!important}
+  html.gp-platform-web .toolbar>*{max-width:100%}
+}
+
+@media(max-width:390px){
+  html.gp-platform-web .wrap{padding-left:10px!important;padding-right:10px!important}
+  html.gp-platform-web .title-row h1{font-size:25px!important}
+  html.gp-platform-web .logo-mark-real{width:38px!important;height:38px!important;min-width:38px!important}
+  html.gp-platform-web .stats{gap:7px!important}
+  html.gp-platform-web .stats .stat{padding:11px!important}
+  html.gp-platform-web .gp-today-grid{grid-template-columns:1fr!important}
+}
+
+/* Quando instalado como PWA, evita seleção acidental em controles de navegação. */
+@media(display-mode:standalone){
+  html.gp-platform-web .side-nav,
+  html.gp-platform-web button{-webkit-tap-highlight-color:transparent}
+}
+
+/* ===== Gestor PRO Mobile Nav v2 ===== */
+@media (max-width: 760px){
+  html.gp-platform-web .side-nav{display:none!important}
+
+  html.gp-platform-web body{
+    padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))!important;
+  }
+
+  .gp-mobile-nav{
+    position:fixed;
+    z-index:99990;
+    left:10px;
+    right:10px;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px));
+    height:68px;
+    padding:6px 5px;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    align-items:stretch;
+    gap:2px;
+    border:1px solid rgba(67,222,205,.12);
+    border-radius:18px;
+    background:rgba(4,24,29,.97);
+    box-shadow:0 14px 38px rgba(0,0,0,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+  }
+
+  .gp-mobile-nav-btn{
+    position:relative;
+    min-width:0;
+    border:0;
+    background:transparent;
+    color:#9cadb3;
+    border-radius:13px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    padding:5px 2px;
+    font:inherit;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .gp-mobile-nav-btn .gp-mnav-icon{
+    width:25px;
+    height:25px;
+    display:grid;
+    place-items:center;
+    font-size:21px;
+    line-height:1;
+    color:#9cadb3;
+  }
+  .gp-mobile-nav-btn .gp-mnav-label{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:10px;
+    line-height:1.1;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .gp-mobile-nav-btn.active{
+    color:#efffff;
+    background:linear-gradient(180deg,rgba(38,214,195,.16),rgba(38,214,195,.07));
+    box-shadow:inset 0 -3px 0 #32d8c4,0 0 0 1px rgba(50,216,196,.12);
+  }
+  .gp-mobile-nav-btn.active .gp-mnav-icon{color:#32d8c4}
+  .gp-mobile-nav-btn.gp-more-open{
+    color:#efffff;
+    background:rgba(38,214,195,.10);
+  }
+  .gp-mobile-nav-btn .gp-mnav-badge{
+    position:absolute;
+    top:3px;
+    right:calc(50% - 23px);
+    min-width:17px;
+    height:17px;
+    padding:0 4px;
+    display:none;
+    place-items:center;
+    border-radius:999px;
+    background:#ff4949;
+    color:#fff;
+    font-size:9px;
+    font-weight:900;
+    border:2px solid #06191e;
+  }
+  .gp-mobile-nav-btn .gp-mnav-badge.show{display:grid}
+
+  .gp-mobile-more-backdrop{
+    position:fixed;
+    z-index:99980;
+    inset:0;
+    display:none;
+    background:rgba(0,8,11,.30);
+    backdrop-filter:blur(1px);
+    -webkit-backdrop-filter:blur(1px);
+  }
+  .gp-mobile-more-backdrop.open{display:block}
+
+  .gp-mobile-more{
+    position:fixed;
+    z-index:99989;
+    left:12px;
+    right:12px;
+    bottom:calc(84px + env(safe-area-inset-bottom,0px));
+    max-height:min(62dvh,520px);
+    overflow:auto;
+    display:none;
+    padding:7px;
+    border:1px solid rgba(65,218,201,.20);
+    border-radius:17px;
+    background:rgba(5,20,26,.985);
+    box-shadow:0 18px 55px rgba(0,0,0,.55);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    transform-origin:bottom center;
+  }
+  .gp-mobile-more.open{display:block;animation:gpMoreIn .16s ease-out}
+  @keyframes gpMoreIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+
+  .gp-mobile-more-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 9px 7px;
+    color:#eaffff;
+    font-size:12px;
+    font-weight:900;
+  }
+  .gp-mobile-more-close{
+    width:30px;height:30px;border:0;border-radius:9px;
+    background:rgba(255,255,255,.05);color:#aebcc1;font-size:18px;cursor:pointer;
+  }
+  .gp-mobile-more-item{
+    width:100%;
+    min-height:48px;
+    display:grid;
+    grid-template-columns:34px 1fr auto;
+    align-items:center;
+    gap:8px;
+    border:0;
+    border-top:1px solid rgba(255,255,255,.055);
+    border-radius:10px;
+    padding:7px 9px;
+    background:transparent;
+    color:#e8f0f2;
+    text-align:left;
+    font:inherit;
+    cursor:pointer;
+  }
+  .gp-mobile-more-item:first-of-type{border-top:0}
+  .gp-mobile-more-item:active{background:rgba(47,214,195,.09)}
+  .gp-mobile-more-item .gp-more-icon{font-size:18px;text-align:center}
+  .gp-mobile-more-item .gp-more-label{font-size:12px;font-weight:760}
+  .gp-mobile-more-item .gp-more-arrow{font-size:18px;color:#74888f}
+  .gp-mobile-more-item .gp-more-count{
+    min-width:20px;height:20px;padding:0 5px;display:none;place-items:center;
+    border-radius:999px;background:#ff4949;color:#fff;font-size:10px;font-weight:900;
+  }
+  .gp-mobile-more-item .gp-more-count.show{display:grid}
+  .gp-mobile-more-item[hidden]{display:none!important}
+}
+
+@media (min-width: 761px){
+  .gp-mobile-nav,.gp-mobile-more,.gp-mobile-more-backdrop{display:none!important}
+}
