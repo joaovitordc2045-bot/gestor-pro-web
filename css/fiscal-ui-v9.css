@@ -1,0 +1,17 @@
+/* Fiscal V9 — cadastro salvo em modo leitura + edição explícita */
+#fiscalModal .fiscal-company-title{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:14px}
+#fiscalModal .fiscal-company-title>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+#fiscalModal .fiscal-saved-badge{flex:0 0 auto;padding:7px 10px;border-radius:999px;border:1px solid rgba(34,197,94,.30);background:rgba(34,197,94,.10);color:#86efac;font-size:11px;font-weight:800;white-space:nowrap}
+#fiscalModal .fiscal-company-form.is-locked .fiscal-company-grid input:disabled,
+#fiscalModal .fiscal-company-form.is-locked .fiscal-company-grid select:disabled{opacity:1;cursor:default;color:#e5eefc;-webkit-text-fill-color:#e5eefc;background:rgba(15,23,42,.62);border-color:rgba(148,163,184,.14);box-shadow:none}
+#fiscalModal .fiscal-company-form.is-locked .fiscal-company-grid label>span{opacity:.72}
+#fiscalModal .fiscal-action-buttons{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+#fiscalModal .fiscal-action-buttons [hidden]{display:none!important}
+#fiscalModal .fiscal-edit-btn{min-height:42px;padding:10px 15px;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.10);color:#bbf7d0;font-weight:750}
+#fiscalModal .fiscal-cancel-btn{min-height:42px;padding:10px 15px;border:1px solid rgba(148,163,184,.24);background:rgba(30,41,59,.72);color:#dbe7f7;font-weight:700}
+@media(max-width:900px){
+ #fiscalModal .fiscal-company-title{align-items:flex-start}
+ #fiscalModal .fiscal-saved-badge{font-size:10px;padding:6px 8px}
+ #fiscalModal .fiscal-action-buttons{width:100%;display:grid;grid-template-columns:1fr;gap:8px}
+ #fiscalModal .fiscal-action-buttons .btn{width:100%;min-height:48px}
+}

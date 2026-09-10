@@ -1,0 +1,62 @@
+/* Gestor PRO Fiscal V17 — workspace ampliado
+   Desktop: Fiscal ocupa praticamente toda a area util.
+   Mobile/tablet: continua como tela cheia de app. */
+
+@media (min-width:901px){
+  #fiscalModal.fiscal-modal-overlay{
+    padding:16px !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  #fiscalModal .fiscal-shell{
+    width:calc(100vw - 32px) !important;
+    height:calc(100dvh - 32px) !important;
+    max-width:none !important;
+    max-height:none !important;
+    border-radius:20px !important;
+  }
+
+  #fiscalModal .fiscal-head{
+    padding:18px 24px 15px !important;
+  }
+
+  #fiscalModal .fiscal-dev-banner{
+    margin:14px 24px 11px !important;
+  }
+
+  #fiscalModal .fiscal-tabs{
+    padding:0 24px 12px !important;
+  }
+
+  #fiscalModal .fiscal-body{
+    padding:4px 24px 26px !important;
+  }
+
+  /* Em monitores largos, aproveita o espaco sem deixar o conteudo esticado demais. */
+  #fiscalModal .fiscal-panel{
+    width:100% !important;
+    max-width:none !important;
+  }
+}
+
+@media (min-width:1400px){
+  #fiscalModal.fiscal-modal-overlay{padding:18px !important}
+  #fiscalModal .fiscal-shell{
+    width:calc(100vw - 36px) !important;
+    height:calc(100dvh - 36px) !important;
+  }
+}
+
+@media (max-width:900px){
+  #fiscalModal.fiscal-modal-overlay{
+    padding:0 !important;
+  }
+  #fiscalModal .fiscal-shell{
+    width:100vw !important;
+    height:100dvh !important;
+    max-width:100vw !important;
+    max-height:100dvh !important;
+    border-radius:0 !important;
+  }
+}

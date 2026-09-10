@@ -1,0 +1,161 @@
+/* Gestor PRO Fiscal V8 — scroll isolado + refinamento Web/Mobile
+   O fundo nunca deve rolar enquanto o Fiscal estiver aberto. */
+
+html.gp-fiscal-open,
+body.gp-fiscal-open{
+  overflow:hidden !important;
+  overscroll-behavior:none !important;
+}
+
+body.gp-fiscal-open{
+  width:100% !important;
+  touch-action:none;
+}
+
+#fiscalModal.fiscal-modal-overlay{
+  position:fixed !important;
+  inset:0 !important;
+  width:100vw !important;
+  height:100dvh !important;
+  overflow:hidden !important;
+  overscroll-behavior:none !important;
+  touch-action:none;
+}
+
+#fiscalModal .fiscal-shell{
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+  overscroll-behavior:contain !important;
+  touch-action:auto;
+}
+
+#fiscalModal .fiscal-head,
+#fiscalModal .fiscal-dev-banner,
+#fiscalModal .fiscal-tabs{
+  flex:0 0 auto !important;
+}
+
+#fiscalModal .fiscal-body{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  overscroll-behavior:contain !important;
+  -webkit-overflow-scrolling:touch !important;
+  scrollbar-gutter:stable;
+  touch-action:pan-y;
+}
+
+#fiscalModal .fiscal-body::-webkit-scrollbar{width:9px}
+#fiscalModal .fiscal-body::-webkit-scrollbar-track{background:transparent}
+#fiscalModal .fiscal-body::-webkit-scrollbar-thumb{
+  background:rgba(117,166,166,.30);
+  border:2px solid transparent;
+  background-clip:padding-box;
+  border-radius:999px;
+}
+#fiscalModal .fiscal-body::-webkit-scrollbar-thumb:hover{background:rgba(117,190,181,.46);background-clip:padding-box}
+
+/* Desktop: painel central estável. Cabeçalho/aviso/abas ficam parados;
+   somente o conteúdo da aba rola. */
+@media (min-width:901px){
+  #fiscalModal.fiscal-modal-overlay{
+    padding:28px !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  #fiscalModal .fiscal-shell{
+    width:min(1120px,calc(100vw - 72px)) !important;
+    height:min(790px,calc(100dvh - 56px)) !important;
+    max-height:calc(100dvh - 56px) !important;
+    border-radius:22px !important;
+  }
+
+  #fiscalModal .fiscal-head{padding:20px 24px 17px !important}
+  #fiscalModal .fiscal-icon{width:46px !important;height:46px !important;flex-basis:46px !important}
+  #fiscalModal .fiscal-head h2{font-size:27px !important}
+  #fiscalModal .fiscal-head p{font-size:13.5px !important}
+
+  #fiscalModal .fiscal-dev-banner{
+    margin:15px 24px 12px !important;
+    padding:13px 14px !important;
+  }
+
+  #fiscalModal .fiscal-tabs{
+    padding:0 24px 13px !important;
+  }
+
+  #fiscalModal .fiscal-body{
+    max-height:none !important;
+    padding:4px 24px 26px !important;
+  }
+
+  #fiscalModal .fiscal-panel.active{
+    animation:fiscalV8In .16s ease-out;
+  }
+
+  #fiscalModal .fiscal-form-section{
+    padding:18px 20px !important;
+  }
+  #fiscalModal .fiscal-company-grid{
+    gap:15px 14px !important;
+  }
+  #fiscalModal .fiscal-company-grid input,
+  #fiscalModal .fiscal-company-grid select{
+    min-height:48px !important;
+  }
+}
+
+@keyframes fiscalV8In{
+  from{opacity:.65;transform:translateY(3px)}
+  to{opacity:1;transform:none}
+}
+
+/* Mobile: vira uma tela de app. A barra inferior do app não disputa espaço
+   com o Fiscal enquanto ele estiver aberto. */
+@media (max-width:900px){
+  body.gp-fiscal-open .mobile-bottom-nav,
+  body.gp-fiscal-open #mobileBottomNav,
+  body.gp-fiscal-open .gp-mobile-nav{
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  #fiscalModal.fiscal-modal-overlay{
+    padding:0 !important;
+    align-items:stretch !important;
+    justify-content:stretch !important;
+  }
+
+  #fiscalModal .fiscal-shell{
+    width:100vw !important;
+    height:100dvh !important;
+    max-width:100vw !important;
+    max-height:100dvh !important;
+    border-radius:0 !important;
+  }
+
+  #fiscalModal .fiscal-head{
+    padding-top:max(14px,env(safe-area-inset-top)) !important;
+  }
+
+  #fiscalModal .fiscal-dev-banner{
+    margin-top:8px !important;
+  }
+
+  #fiscalModal .fiscal-tabs{
+    scroll-snap-type:x proximity;
+  }
+  #fiscalModal .fiscal-tab{scroll-snap-align:start}
+
+  #fiscalModal .fiscal-body{
+    padding-bottom:calc(28px + env(safe-area-inset-bottom)) !important;
+  }
+
+  #fiscalModal .fiscal-company-form{gap:13px !important}
+  #fiscalModal .fiscal-form-section{padding:14px !important}
+  #fiscalModal .fiscal-form-section-title{margin-bottom:12px !important}
+}

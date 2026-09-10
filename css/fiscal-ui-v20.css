@@ -1,0 +1,14 @@
+/* V20 - Preparação fiscal completa */
+.fiscal-services-title>div{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:6px!important}
+.fiscal-services-title b{display:block!important;line-height:1.25!important}
+.fiscal-services-title span{display:block!important;line-height:1.55!important;font-weight:400!important}
+.fiscal-service-editor{align-items:start}
+.fiscal-readiness-item{position:relative}
+.fiscal-readiness-item button.fiscal-readiness-fix{margin-left:auto;border:1px solid rgba(86,214,193,.28);background:rgba(86,214,193,.08);color:#bff9ee;border-radius:9px;padding:6px 9px;cursor:pointer;font-size:12px}
+.fiscal-draft-status{display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:11px;letter-spacing:.04em;border:1px solid rgba(255,255,255,.12);font-weight:600}
+.fiscal-draft-status.is-ready{color:#9ff2d8;background:rgba(32,186,143,.12);border-color:rgba(32,186,143,.3)}
+.fiscal-draft-status.is-draft{color:#d7dde4;background:rgba(255,255,255,.05)}
+.fiscal-draft-taxline{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;color:#aab8c1;font-size:12px}
+.fiscal-draft-taxline span{padding:3px 7px;border:1px solid rgba(255,255,255,.08);border-radius:7px}
+#nfsePreviewCompanyLocation{display:block;margin-top:3px;color:#93a5ae;font-size:12px;font-weight:400}
+@media(max-width:720px){.fiscal-readiness-item button.fiscal-readiness-fix{width:100%;margin:7px 0 0 0}.fiscal-draft-taxline{gap:5px}}

@@ -1,0 +1,867 @@
+/* Gestor PRO Web Mobile / PWA
+   A Web continua com o layout desktop acima de 820px e assume
+   uma interface de aplicativo em telas menores. */
+
+html.gp-platform-web{
+  min-height:100%;
+  background:#06151d;
+}
+
+html.gp-platform-web body{
+  min-height:100%;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+/* Respeita áreas seguras de celulares com notch/barra de gestos. */
+@supports (padding: max(0px)){
+  html.gp-platform-web body{
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+  }
+}
+
+@media (max-width:820px){
+  html.gp-platform-web body{
+    padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))!important;
+    background:#06151d!important;
+    overflow-x:hidden!important;
+  }
+
+  html.gp-platform-web .wrap{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:14px 12px calc(96px + env(safe-area-inset-bottom,0px))!important;
+  }
+
+  html.gp-platform-web header{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0 0 12px!important;
+    padding:6px 2px 8px!important;
+  }
+  html.gp-platform-web header>div:first-child{min-width:0!important}
+  html.gp-platform-web .title-row{gap:10px!important;justify-content:flex-start!important}
+  html.gp-platform-web .logo-mark-real{width:42px!important;height:42px!important;min-width:42px!important;border-radius:12px!important}
+  html.gp-platform-web .title-row h1{font-size:28px!important;line-height:1!important;letter-spacing:-.035em!important;white-space:nowrap!important}
+  html.gp-platform-web .subtitle{margin-top:5px!important;font-size:11px!important;line-height:1.35!important;color:#91aaa9!important}
+  html.gp-platform-web .datetime-stack{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;min-width:0!important}
+  html.gp-platform-web .datetime{display:none!important}
+  html.gp-platform-web .account-chip{min-width:0!important;padding:5px!important;border-radius:12px!important}
+  html.gp-platform-web .account-copy{display:none!important}
+  html.gp-platform-web .account-avatar{width:34px!important;height:34px!important;min-width:34px!important}
+  html.gp-platform-web .logout-btn{width:32px!important;height:32px!important}
+
+  html.gp-platform-web .executive-welcome{display:block!important;padding:14px!important;margin-bottom:10px!important;border-radius:14px!important}
+  html.gp-platform-web .executive-welcome h2{font-size:18px!important}
+  html.gp-platform-web .executive-welcome p{font-size:11px!important;line-height:1.45!important}
+  html.gp-platform-web .executive-new-client{width:100%!important;margin-top:12px!important}
+
+  html.gp-platform-web .stats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;margin-bottom:12px!important}
+  html.gp-platform-web .stats .stat{min-width:0!important;min-height:104px!important;padding:13px!important;border-radius:13px!important}
+  html.gp-platform-web .stats .stat-value{font-size:24px!important}
+  html.gp-platform-web .stats .stat-label{font-size:9px!important}
+  html.gp-platform-web .stats .stat-detail{font-size:9.5px!important}
+  html.gp-platform-web .stats .stat-revenue{grid-column:1/-1!important;min-height:90px!important}
+
+  html.gp-platform-web .gp-today{padding:14px!important;margin-bottom:12px!important;border-radius:15px!important}
+  html.gp-platform-web .gp-today-head{display:flex!important;flex-direction:row!important;align-items:flex-start!important;justify-content:space-between!important;gap:10px!important}
+  html.gp-platform-web .gp-today-title{align-items:flex-start!important}
+  html.gp-platform-web .gp-today-title h2{font-size:16px!important}
+  html.gp-platform-web .gp-today-title p{font-size:10.5px!important}
+  html.gp-platform-web .gp-today-score{flex:0 0 auto!important;text-align:right!important}
+  html.gp-platform-web .gp-today-score strong{font-size:21px!important}
+  html.gp-platform-web .gp-today-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  html.gp-platform-web .gp-today-item{min-height:84px!important;padding:11px!important}
+
+  html.gp-platform-web .card,
+  html.gp-platform-web .agenda-card,
+  html.gp-platform-web .billing-section,
+  html.gp-platform-web .admin-zone{border-radius:14px!important}
+
+  /* Menu vira barra inferior, como aplicativo. */
+  html.gp-platform-web .side-nav{
+    left:10px!important;
+    right:10px!important;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;
+    top:auto!important;
+    transform:none!important;
+    width:auto!important;
+    max-width:none!important;
+    height:62px!important;
+    min-height:62px!important;
+    padding:6px!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:3px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    border-radius:17px!important;
+    background:rgba(5,25,29,.97)!important;
+    backdrop-filter:blur(18px)!important;
+    -webkit-backdrop-filter:blur(18px)!important;
+    box-shadow:0 14px 35px rgba(0,0,0,.42)!important;
+    scrollbar-width:none!important;
+  }
+  html.gp-platform-web .side-nav::-webkit-scrollbar{display:none!important}
+  html.gp-platform-web .side-nav-brand,
+  html.gp-platform-web .nav-separator,
+  html.gp-platform-web .menu-group-label{display:none!important}
+  html.gp-platform-web .side-nav .nav-item{width:48px!important;min-width:48px!important;height:48px!important;min-height:48px!important;padding:0!important;margin:0!important;display:grid!important;place-items:center!important;border-radius:12px!important;box-shadow:none!important}
+  html.gp-platform-web .side-nav .nav-text{display:none!important}
+  html.gp-platform-web .side-nav .nav-item.active{background:rgba(53,214,194,.12)!important;box-shadow:inset 0 -3px 0 #35d6c2!important}
+  html.gp-platform-web .side-nav .nav-item::after{display:none!important}
+
+  html.gp-platform-web .partner-nav-cta{width:48px!important;min-width:48px!important;height:48px!important;min-height:48px!important;padding:0!important;margin:0!important;display:grid!important;place-items:center!important;border-radius:12px!important;flex:0 0 48px!important}
+  html.gp-platform-web .partner-nav-icon{width:32px!important;height:32px!important;min-width:32px!important;margin:0!important}
+  html.gp-platform-web .partner-nav-copy{display:none!important}
+  html.gp-platform-web .gp-today-panel{display:none!important}
+
+  /* Login PWA sem overflow e sem depender de altura fixa. */
+  html.gp-platform-web .auth-gate{min-height:100dvh!important;padding:14px!important;background:radial-gradient(480px 360px at 10% 5%,rgba(53,214,194,.10),transparent 70%),#06151d!important}
+  html.gp-platform-web .auth-shell{width:100%!important;min-height:0!important;max-height:none!important;display:block!important;border-radius:18px!important;overflow:hidden!important}
+  html.gp-platform-web .auth-brand{display:none!important}
+  html.gp-platform-web .auth-panel{width:100%!important;min-height:calc(100dvh - 28px)!important;padding:24px 18px!important;display:flex!important;align-items:center!important}
+  html.gp-platform-web .auth-form-wrap{width:100%!important;max-width:480px!important;margin:auto!important}
+  html.gp-platform-web .auth-form-title{font-size:25px!important}
+  html.gp-platform-web .auth-form-subtitle{font-size:12px!important}
+  html.gp-platform-web .auth-field input{min-height:46px!important;font-size:16px!important}
+  html.gp-platform-web .auth-submit{min-height:48px!important}
+
+  /* Tabelas extensas continuam utilizáveis por rolagem horizontal. */
+  html.gp-platform-web .admin-table,
+  html.gp-platform-web .table-wrap{max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+
+  /* Modais nunca ultrapassam a tela do celular. */
+  html.gp-platform-web .modal-box,
+  html.gp-platform-web .admin-modal-box{max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 24px)!important;overflow:auto!important}
+}
+
+@media(max-width:560px){
+  html.gp-platform-web .agenda-head{align-items:flex-start!important;flex-direction:column!important}
+  html.gp-platform-web .agenda-summary{text-align:left!important}
+  html.gp-platform-web .toolbar{flex-wrap:wrap!important}
+  html.gp-platform-web .toolbar>*{max-width:100%}
+}
+
+@media(max-width:390px){
+  html.gp-platform-web .wrap{padding-left:10px!important;padding-right:10px!important}
+  html.gp-platform-web .title-row h1{font-size:25px!important}
+  html.gp-platform-web .logo-mark-real{width:38px!important;height:38px!important;min-width:38px!important}
+  html.gp-platform-web .stats{gap:7px!important}
+  html.gp-platform-web .stats .stat{padding:11px!important}
+  html.gp-platform-web .gp-today-grid{grid-template-columns:1fr!important}
+}
+
+/* Quando instalado como PWA, evita seleção acidental em controles de navegação. */
+@media(display-mode:standalone){
+  html.gp-platform-web .side-nav,
+  html.gp-platform-web button{-webkit-tap-highlight-color:transparent}
+}
+
+/* ===== Gestor PRO Mobile Nav v2 ===== */
+@media (max-width: 760px){
+  html.gp-platform-web .side-nav{display:none!important}
+
+  html.gp-platform-web body{
+    padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))!important;
+  }
+
+  .gp-mobile-nav{
+    position:fixed;
+    z-index:99990;
+    left:10px;
+    right:10px;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px));
+    height:68px;
+    padding:6px 5px;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    align-items:stretch;
+    gap:2px;
+    border:1px solid rgba(67,222,205,.12);
+    border-radius:18px;
+    background:rgba(4,24,29,.97);
+    box-shadow:0 14px 38px rgba(0,0,0,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+  }
+
+  .gp-mobile-nav-btn{
+    position:relative;
+    min-width:0;
+    border:0;
+    background:transparent;
+    color:#9cadb3;
+    border-radius:13px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    padding:5px 2px;
+    font:inherit;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .gp-mobile-nav-btn .gp-mnav-icon{
+    width:25px;
+    height:25px;
+    display:grid;
+    place-items:center;
+    font-size:21px;
+    line-height:1;
+    color:#9cadb3;
+  }
+  .gp-mobile-nav-btn .gp-mnav-label{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:10px;
+    line-height:1.1;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .gp-mobile-nav-btn.active{
+    color:#efffff;
+    background:linear-gradient(180deg,rgba(38,214,195,.16),rgba(38,214,195,.07));
+    box-shadow:inset 0 -3px 0 #32d8c4,0 0 0 1px rgba(50,216,196,.12);
+  }
+  .gp-mobile-nav-btn.active .gp-mnav-icon{color:#32d8c4}
+  .gp-mobile-nav-btn.gp-more-open{
+    color:#efffff;
+    background:rgba(38,214,195,.10);
+  }
+  .gp-mobile-nav-btn .gp-mnav-badge{
+    position:absolute;
+    top:3px;
+    right:calc(50% - 23px);
+    min-width:17px;
+    height:17px;
+    padding:0 4px;
+    display:none;
+    place-items:center;
+    border-radius:999px;
+    background:#ff4949;
+    color:#fff;
+    font-size:9px;
+    font-weight:900;
+    border:2px solid #06191e;
+  }
+  .gp-mobile-nav-btn .gp-mnav-badge.show{display:grid}
+
+  .gp-mobile-more-backdrop{
+    position:fixed;
+    z-index:99980;
+    inset:0;
+    display:none;
+    background:rgba(0,8,11,.30);
+    backdrop-filter:blur(1px);
+    -webkit-backdrop-filter:blur(1px);
+  }
+  .gp-mobile-more-backdrop.open{display:block}
+
+  .gp-mobile-more{
+    position:fixed;
+    z-index:99989;
+    left:12px;
+    right:12px;
+    bottom:calc(84px + env(safe-area-inset-bottom,0px));
+    max-height:min(62dvh,520px);
+    overflow:auto;
+    display:none;
+    padding:7px;
+    border:1px solid rgba(65,218,201,.20);
+    border-radius:17px;
+    background:rgba(5,20,26,.985);
+    box-shadow:0 18px 55px rgba(0,0,0,.55);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    transform-origin:bottom center;
+  }
+  .gp-mobile-more.open{display:block;animation:gpMoreIn .16s ease-out}
+  @keyframes gpMoreIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+
+  .gp-mobile-more-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 9px 7px;
+    color:#eaffff;
+    font-size:12px;
+    font-weight:900;
+  }
+  .gp-mobile-more-close{
+    width:30px;height:30px;border:0;border-radius:9px;
+    background:rgba(255,255,255,.05);color:#aebcc1;font-size:18px;cursor:pointer;
+  }
+  .gp-mobile-more-item{
+    width:100%;
+    min-height:48px;
+    display:grid;
+    grid-template-columns:34px 1fr auto;
+    align-items:center;
+    gap:8px;
+    border:0;
+    border-top:1px solid rgba(255,255,255,.055);
+    border-radius:10px;
+    padding:7px 9px;
+    background:transparent;
+    color:#e8f0f2;
+    text-align:left;
+    font:inherit;
+    cursor:pointer;
+  }
+  .gp-mobile-more-item:first-of-type{border-top:0}
+  .gp-mobile-more-item:active{background:rgba(47,214,195,.09)}
+  .gp-mobile-more-item .gp-more-icon{font-size:18px;text-align:center}
+  .gp-mobile-more-item .gp-more-label{font-size:12px;font-weight:760}
+  .gp-mobile-more-item .gp-more-arrow{font-size:18px;color:#74888f}
+  .gp-mobile-more-item .gp-more-count{
+    min-width:20px;height:20px;padding:0 5px;display:none;place-items:center;
+    border-radius:999px;background:#ff4949;color:#fff;font-size:10px;font-weight:900;
+  }
+  .gp-mobile-more-item .gp-more-count.show{display:grid}
+  .gp-mobile-more-item[hidden]{display:none!important}
+}
+
+@media (min-width: 761px){
+  .gp-mobile-nav,.gp-mobile-more,.gp-mobile-more-backdrop{display:none!important}
+}
+
+/* ===== Gestor PRO Web Mobile · hotfix responsivo 2026-09-08 =====
+   Mantém o desktop intacto e impede componentes novos de herdarem
+   larguras/grids de desktop no navegador do celular. */
+@media (max-width:820px){
+  html.gp-platform-web,
+  html.gp-platform-web body{
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:hidden!important;
+  }
+
+  html.gp-platform-web *,
+  html.gp-platform-web *::before,
+  html.gp-platform-web *::after{box-sizing:border-box}
+
+  html.gp-platform-web .wrap,
+  html.gp-platform-web main,
+  html.gp-platform-web section,
+  html.gp-platform-web .section-anchor,
+  html.gp-platform-web .card,
+  html.gp-platform-web .panel,
+  html.gp-platform-web .partner-section,
+  html.gp-platform-web .partner-body,
+  html.gp-platform-web .partner-tab-panel{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  /* Painel: Status, Planos e Ações nunca ficam lado a lado no telefone. */
+  html.gp-platform-web .dashboard-insights{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:100%!important;
+    gap:12px!important;
+  }
+  html.gp-platform-web .dashboard-insight-card,
+  html.gp-platform-web .status-insight,
+  html.gp-platform-web .plans-insight,
+  html.gp-platform-web .quick-actions-insight{
+    grid-column:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  html.gp-platform-web .status-insight-body{
+    grid-template-columns:minmax(110px,130px) minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  html.gp-platform-web .status-donut{max-width:100%!important}
+  html.gp-platform-web .plan-usage-row{
+    grid-template-columns:minmax(0,1fr) 44px!important;
+    gap:8px!important;
+  }
+  html.gp-platform-web .plan-usage-track{grid-column:1/-1!important}
+
+  /* Gráficos e bloco inferior. */
+  html.gp-platform-web .dashboard-lower-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  html.gp-platform-web .chart-card,
+  html.gp-platform-web .chart-wrap,
+  html.gp-platform-web canvas,
+  html.gp-platform-web svg{
+    max-width:100%!important;
+  }
+
+  /* Parceiros: elimina qualquer largura mínima herdada do desktop. */
+  html.gp-platform-web #partnersSection{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+  }
+  html.gp-platform-web #partnersSection .partner-top,
+  html.gp-platform-web #partnersSection .partner-body,
+  html.gp-platform-web #partnersSection .partner-grid,
+  html.gp-platform-web #partnersSection .partner-kpis,
+  html.gp-platform-web #partnersSection .partner-report-grid{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  html.gp-platform-web #partnersSection .partner-grid{grid-template-columns:minmax(0,1fr)!important}
+  html.gp-platform-web #partnersSection .partner-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  html.gp-platform-web #partnersSection .partner-card,
+  html.gp-platform-web #partnersSection .partner-kpi,
+  html.gp-platform-web #partnersSection .partner-history-row,
+  html.gp-platform-web #partnersSection .partner-notify-row,
+  html.gp-platform-web #partnersSection .partner-report-kpi{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  html.gp-platform-web #partnersSection .partner-tabs-main{
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  /* Elementos de formulário não podem alargar a página. */
+  html.gp-platform-web input,
+  html.gp-platform-web select,
+  html.gp-platform-web textarea,
+  html.gp-platform-web button{max-width:100%}
+}
+
+@media (max-width:480px){
+  html.gp-platform-web .status-insight-body{
+    grid-template-columns:1fr!important;
+  }
+  html.gp-platform-web .status-donut{margin-inline:auto!important}
+}
+
+/* ===== Gestor PRO Mobile Home v2 · 2026-09-08 =====
+   Home redesenhada somente para navegador mobile. Desktop permanece intacto. */
+@media (max-width:560px){
+  html.gp-platform-web .wrap{
+    padding:12px 12px calc(112px + env(safe-area-inset-bottom,0px))!important;
+  }
+
+  /* Cabeçalho compacto: marca + conta em uma única faixa. */
+  html.gp-platform-web #overviewSection{
+    min-height:0!important;
+    margin:0 0 12px!important;
+    padding:11px 12px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:10px!important;
+    border-radius:14px!important;
+  }
+  html.gp-platform-web #overviewSection > div:first-child{min-width:0!important;flex:1 1 auto!important}
+  html.gp-platform-web #overviewSection .title-row{gap:9px!important}
+  html.gp-platform-web #overviewSection .logo-mark{
+    width:40px!important;height:40px!important;min-width:40px!important;border-radius:10px!important;
+  }
+  html.gp-platform-web #overviewSection .title-row h1{
+    font-size:19px!important;line-height:1.05!important;white-space:nowrap!important;
+  }
+  html.gp-platform-web #overviewSection .subtitle{
+    margin:3px 0 0 49px!important;
+    max-width:190px!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    white-space:nowrap!important;
+    font-size:10.5px!important;
+    line-height:1.2!important;
+  }
+  html.gp-platform-web #overviewSection .datetime{display:none!important}
+  html.gp-platform-web #overviewSection .datetime-stack{display:block!important;flex:0 0 auto!important}
+  html.gp-platform-web #overviewSection .account-chip{
+    min-height:40px!important;
+    padding:3px 5px!important;
+    gap:4px!important;
+    background:rgba(255,255,255,.025)!important;
+  }
+  html.gp-platform-web #overviewSection .account-avatar{
+    width:34px!important;height:34px!important;min-width:34px!important;border-radius:9px!important;font-size:11px!important;
+  }
+  html.gp-platform-web #overviewSection .account-copy{display:none!important}
+  html.gp-platform-web #overviewSection .logout-btn{
+    width:29px!important;height:34px!important;min-width:29px!important;padding:0!important;font-size:15px!important;
+  }
+
+  /* Saudação mais curta e focada. */
+  html.gp-platform-web .executive-welcome{
+    margin:0 0 12px!important;
+    padding:5px 2px 0!important;
+    gap:12px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  html.gp-platform-web .executive-welcome-copy{padding:0 4px!important}
+  html.gp-platform-web .executive-welcome h2{
+    font-size:23px!important;line-height:1.12!important;margin:0 0 5px!important;letter-spacing:-.03em!important;
+  }
+  html.gp-platform-web .executive-welcome p{
+    font-size:12px!important;line-height:1.45!important;margin:0!important;color:#9fb3bd!important;
+  }
+  html.gp-platform-web .executive-new-client{
+    width:100%!important;
+    min-height:46px!important;
+    padding:0 14px!important;
+    border-radius:12px!important;
+    font-size:13px!important;
+    font-weight:850!important;
+  }
+
+  /* Resumo em 2x2; receita vira faixa compacta. */
+  html.gp-platform-web .stats{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:9px!important;
+    margin:0 0 12px!important;
+  }
+  html.gp-platform-web .stat{
+    min-height:91px!important;
+    padding:13px 13px!important;
+    border-radius:13px!important;
+  }
+  html.gp-platform-web .stat::after{opacity:.42!important}
+  html.gp-platform-web .stat-label{
+    font-size:9px!important;
+    line-height:1.2!important;
+    letter-spacing:.045em!important;
+    margin-bottom:7px!important;
+  }
+  html.gp-platform-web .stat-value{
+    font-size:26px!important;
+    line-height:1!important;
+    letter-spacing:-.035em!important;
+  }
+  html.gp-platform-web .stat-revenue{
+    grid-column:1/-1!important;
+    min-height:76px!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;
+    column-gap:12px!important;
+    padding:13px 15px!important;
+  }
+  html.gp-platform-web .stat-revenue .stat-label{grid-column:1;grid-row:1;margin:0!important}
+  html.gp-platform-web .stat-revenue .stat-value{grid-column:2;grid-row:1/3;font-size:25px!important;white-space:nowrap!important}
+  html.gp-platform-web .stat-revenue .stat-detail{grid-column:1;grid-row:2;margin:2px 0 0!important;font-size:9.5px!important;line-height:1.25!important}
+
+  /* Gestor PRO Hoje: prioridade compacta em vez de card gigante. */
+  html.gp-platform-web .gp-today{
+    margin:0 0 12px!important;
+    padding:15px!important;
+    border-radius:14px!important;
+  }
+  html.gp-platform-web .gp-today-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin-bottom:12px!important;
+  }
+  html.gp-platform-web .gp-today-title{gap:9px!important;min-width:0!important}
+  html.gp-platform-web .gp-today-icon{
+    width:34px!important;height:34px!important;min-width:34px!important;border-radius:10px!important;font-size:15px!important;
+  }
+  html.gp-platform-web .gp-today h2{font-size:15px!important;margin:0 0 2px!important;white-space:nowrap!important}
+  html.gp-platform-web .gp-today p{
+    font-size:9.5px!important;line-height:1.25!important;
+    display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important;
+  }
+  html.gp-platform-web .gp-today-score{text-align:right!important}
+  html.gp-platform-web .gp-today-score strong{font-size:20px!important;line-height:1!important}
+  html.gp-platform-web .gp-today-score span{font-size:7.5px!important;letter-spacing:.07em!important}
+  html.gp-platform-web .gp-today-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  html.gp-platform-web .gp-today-item{
+    min-height:68px!important;
+    padding:10px 11px!important;
+    border-radius:10px!important;
+  }
+  html.gp-platform-web .gp-today-label{font-size:8px!important;line-height:1.15!important}
+  html.gp-platform-web .gp-today-item strong{font-size:18px!important;margin:5px 0 0!important;line-height:1!important}
+  html.gp-platform-web .gp-today-item small{display:none!important}
+  html.gp-platform-web .gp-today-actions{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:7px!important;
+    margin-top:10px!important;
+  }
+  html.gp-platform-web .gp-today-actions .btn{
+    width:100%!important;min-height:36px!important;padding:0 8px!important;border-radius:9px!important;font-size:10px!important;
+  }
+  html.gp-platform-web #gpTodayResolveBtn{grid-column:1/-1!important}
+
+  /* Conteúdo secundário começa mais rápido; evita sensação de home infinita. */
+  html.gp-platform-web .dashboard-brief{gap:10px!important;margin-bottom:12px!important}
+  html.gp-platform-web .premium-intro{padding:13px!important}
+  html.gp-platform-web .premium-intro h2{font-size:15px!important}
+  html.gp-platform-web .premium-intro p{font-size:10px!important;line-height:1.35!important}
+  html.gp-platform-web .premium-metric{gap:8px!important}
+  html.gp-platform-web .attention{padding:13px!important}
+
+  /* A barra fixa nunca encobre o fim da página. */
+  html.gp-platform-web body{padding-bottom:calc(102px + env(safe-area-inset-bottom,0px))!important}
+}
+
+/* ===== Gestor PRO Mobile polish v3 · 2026-09-08 =====
+   Ajustes de alinhamento em Planos Mais Utilizados e legibilidade do gráfico.
+   Barra inferior permanece fixa. */
+@media (max-width:560px){
+  /* Planos: nome + percentual na mesma linha e barra contínua logo abaixo. */
+  html.gp-platform-web .plans-insight{
+    padding:16px!important;
+  }
+  html.gp-platform-web .plans-insight .insight-head{
+    margin-bottom:16px!important;
+  }
+  html.gp-platform-web .plans-list{
+    gap:18px!important;
+    margin-top:0!important;
+  }
+  html.gp-platform-web .plan-usage-row{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:auto auto!important;
+    align-items:end!important;
+    column-gap:12px!important;
+    row-gap:8px!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+  html.gp-platform-web .plan-usage-name{
+    grid-column:1!important;
+    grid-row:1!important;
+    min-width:0!important;
+  }
+  html.gp-platform-web .plan-usage-name strong{
+    font-size:14px!important;
+    line-height:1.15!important;
+    margin:0!important;
+  }
+  html.gp-platform-web .plan-usage-name span{
+    font-size:11px!important;
+    line-height:1.2!important;
+    margin-top:3px!important;
+  }
+  html.gp-platform-web .plan-usage-pct{
+    grid-column:2!important;
+    grid-row:1!important;
+    align-self:center!important;
+    min-width:40px!important;
+    text-align:right!important;
+    font-size:14px!important;
+    line-height:1!important;
+    font-weight:850!important;
+    color:#f3fbfc!important;
+  }
+  html.gp-platform-web .plan-usage-bar{
+    grid-column:1/-1!important;
+    grid-row:2!important;
+    width:100%!important;
+    height:8px!important;
+    margin:0!important;
+    border-radius:999px!important;
+    background:rgba(143,177,188,.13)!important;
+    overflow:hidden!important;
+  }
+  html.gp-platform-web .plan-usage-bar i{
+    display:block!important;
+    height:100%!important;
+    min-width:0!important;
+    border-radius:inherit!important;
+    background:linear-gradient(90deg,#28cdbb,#42e2d1)!important;
+    box-shadow:0 0 14px rgba(46,211,194,.20)!important;
+  }
+  html.gp-platform-web .plan-usage-bar i[style*="width:0%"]{
+    width:0!important;
+  }
+
+  /* Receita: cabeçalho mais limpo e gráfico maior/mais legível no celular. */
+  html.gp-platform-web .home-chart{
+    padding:16px!important;
+    border-radius:14px!important;
+  }
+  html.gp-platform-web .home-chart .chart-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:10px!important;
+    margin-bottom:4px!important;
+  }
+  html.gp-platform-web .home-chart .chart-head h2{
+    font-size:18px!important;
+    line-height:1.12!important;
+    margin:0 0 5px!important;
+    max-width:none!important;
+  }
+  html.gp-platform-web .home-chart .chart-kicker{
+    font-size:11px!important;
+    line-height:1.35!important;
+  }
+  html.gp-platform-web .home-chart .chart-summary{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:10px!important;
+    width:100%!important;
+    text-align:left!important;
+  }
+  html.gp-platform-web .home-chart .chart-summary strong{
+    font-size:21px!important;
+    line-height:1!important;
+    white-space:nowrap!important;
+  }
+  html.gp-platform-web .home-chart .chart-trend{
+    margin:0!important;
+    padding:5px 8px!important;
+    max-width:56%!important;
+    white-space:normal!important;
+    text-align:right!important;
+    justify-content:flex-end!important;
+    font-size:10px!important;
+    line-height:1.15!important;
+  }
+  html.gp-platform-web .home-chart .chart-wrap{
+    height:225px!important;
+    min-height:225px!important;
+    margin-top:12px!important;
+    border-radius:10px!important;
+    background:linear-gradient(180deg,rgba(4,18,27,.32),rgba(4,18,27,.08))!important;
+  }
+  html.gp-platform-web .home-chart .chart-wrap svg{
+    width:100%!important;
+    height:100%!important;
+    overflow:visible!important;
+  }
+  html.gp-platform-web .home-chart .chart-axis-label{
+    font-size:16px!important;
+    fill:#93aab7!important;
+    font-weight:650!important;
+  }
+  html.gp-platform-web .home-chart .chart-grid{
+    stroke:rgba(148,163,184,.16)!important;
+    stroke-width:1.25!important;
+  }
+  html.gp-platform-web .home-chart .chart-line{
+    stroke-width:4.2!important;
+    filter:drop-shadow(0 5px 10px rgba(53,214,194,.34))!important;
+  }
+  html.gp-platform-web .home-chart .chart-point{
+    r:5!important;
+    stroke-width:3.5!important;
+  }
+}
+
+@media (max-width:390px){
+  html.gp-platform-web .home-chart .chart-axis-label{font-size:15px!important}
+  html.gp-platform-web .home-chart .chart-wrap{height:215px!important;min-height:215px!important}
+}
+\n\n/* === Gestor PRO Fiscal BETA — Mobile navegador === */\n@media (max-width:760px){\n  html.gp-fiscal-open,body.gp-fiscal-open{overflow:hidden!important;overscroll-behavior:none!important}\n  html.gp-platform-web .fiscal-modal-overlay{padding:0!important;align-items:stretch!important;background:#06141b!important;backdrop-filter:none!important}\n  html.gp-platform-web .fiscal-shell{width:100vw!important;max-width:100vw!important;height:100dvh!important;max-height:100dvh!important;border:0!important;border-radius:0!important;box-shadow:none!important}\n  html.gp-platform-web .fiscal-head{padding:14px 14px 12px!important;align-items:center!important}.fiscal-head-copy{gap:10px!important}.fiscal-icon{width:38px!important;height:38px!important;flex-basis:38px!important;border-radius:11px!important;font-size:18px!important}.fiscal-kicker{font-size:8px!important;margin-bottom:2px!important}.fiscal-head h2{font-size:19px!important}.fiscal-head p{display:none!important}\n  html.gp-platform-web .fiscal-dev-banner{grid-template-columns:auto 1fr!important;margin:10px 12px 0!important;padding:10px!important;gap:9px!important}.fiscal-dev-mark{width:30px!important;height:30px!important}.fiscal-dev-banner b{font-size:11px!important}.fiscal-dev-banner span:not(.fiscal-status-badge){font-size:9.8px!important;line-height:1.35!important}.fiscal-status-badge{display:none!important}\n  html.gp-platform-web .fiscal-tabs{padding:11px 12px 0!important;gap:6px!important}.fiscal-tab{padding:8px 10px!important;font-size:10px!important;border-radius:9px!important}.fiscal-tab span{display:none!important}\n  html.gp-platform-web .fiscal-body{padding:13px 12px calc(28px + env(safe-area-inset-bottom))!important;overflow-y:auto!important;min-height:0!important;-webkit-overflow-scrolling:touch!important}.fiscal-overview-grid{grid-template-columns:1fr!important;gap:9px!important}.fiscal-card{padding:13px!important;grid-template-columns:auto 1fr!important;gap:10px!important}.fiscal-card-icon{width:34px!important;height:34px!important}.fiscal-card h3{font-size:13px!important}.fiscal-card p{font-size:10px!important}.fiscal-link{font-size:10px!important}\n  .fiscal-roadmap{margin-top:10px!important;padding:13px!important}.fiscal-section-head{margin-bottom:10px!important;gap:10px!important}.fiscal-section-head h3{font-size:14px!important}.fiscal-section-head p{font-size:9.8px!important;line-height:1.4!important}.fiscal-roadmap-status,.fiscal-coming{font-size:8px!important;padding:5px 7px!important}.fiscal-roadmap-list{grid-template-columns:1fr!important;gap:7px!important}.fiscal-roadmap-item{padding:10px!important}.fiscal-roadmap-item span{font-size:9.5px!important}\n  .fiscal-form-grid{grid-template-columns:1fr!important;gap:10px!important}.fiscal-form-grid label.wide{grid-column:auto!important}.fiscal-form-grid input,.fiscal-form-grid textarea{padding:10px!important;font-size:11px!important}.fiscal-issue-actions{align-items:stretch!important;flex-direction:column!important}.fiscal-issue-actions span{font-size:9.5px!important}.fiscal-issue-actions .btn{width:100%!important}\n  .fiscal-kpis{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}.fiscal-kpis>div{padding:10px!important}.fiscal-kpis span{font-size:8.5px!important}.fiscal-kpis b{font-size:17px!important}.fiscal-empty{padding:32px 14px!important}.fiscal-empty p{font-size:10px!important}\n  .fiscal-settings-grid{grid-template-columns:1fr!important;gap:7px!important}.fiscal-setting{padding:11px!important;align-items:flex-start!important}.fiscal-setting b{font-size:10.5px!important}.fiscal-setting div span{font-size:9.5px!important}.fiscal-setting-state{font-size:7.5px!important}.fiscal-info-note{font-size:9.5px!important;line-height:1.4!important}\n}\n
+/* === Gestor PRO Fiscal BETA — Mobile V2 (operacional) === */
+@media (max-width:760px) {
+  html.gp-platform-web .fiscal-modal-overlay { padding:0 !important; align-items:stretch !important; }
+  html.gp-platform-web .fiscal-shell { width:100% !important; max-width:100% !important; height:100dvh !important; max-height:100dvh !important; border-radius:0 !important; }
+  html.gp-platform-web .fiscal-head { position:relative !important; padding:16px 16px 12px !important; min-height:auto !important; }
+  html.gp-platform-web .fiscal-head-copy { align-items:center !important; gap:11px !important; padding-right:48px !important; }
+  html.gp-platform-web .fiscal-icon { width:40px !important; height:40px !important; flex:0 0 40px !important; }
+  html.gp-platform-web .fiscal-kicker { font-size:9px !important; }
+  html.gp-platform-web .fiscal-head h2 { font-size:22px !important; line-height:1.1 !important; }
+  html.gp-platform-web .fiscal-head p { display:none !important; }
+  html.gp-platform-web .fiscal-close { position:absolute !important; top:14px !important; right:14px !important; width:38px !important; height:38px !important; margin:0 !important; }
+
+  html.gp-platform-web .fiscal-dev-banner { display:flex !important; align-items:flex-start !important; margin:8px 14px 0 !important; padding:11px 12px !important; gap:9px !important; }
+  html.gp-platform-web .fiscal-dev-mark { display:none !important; }
+  html.gp-platform-web .fiscal-dev-banner b { font-size:11px !important; }
+  html.gp-platform-web .fiscal-dev-banner span:not(.fiscal-status-badge) { font-size:10px !important; line-height:1.35 !important; }
+  html.gp-platform-web .fiscal-status-badge { display:inline-flex !important; order:-1 !important; flex:0 0 auto !important; padding:5px 7px !important; font-size:8px !important; }
+
+  html.gp-platform-web .fiscal-tabs { padding:10px 14px 2px !important; gap:6px !important; width:100% !important; box-sizing:border-box !important; }
+  html.gp-platform-web .fiscal-tab { flex:1 1 auto !important; min-width:max-content !important; padding:8px 9px !important; font-size:10px !important; text-align:center !important; }
+  html.gp-platform-web .fiscal-tab span { display:none !important; }
+
+  html.gp-platform-web .fiscal-body { padding:12px 14px calc(110px + env(safe-area-inset-bottom)) !important; overflow-y:auto !important; overflow-x:hidden !important; }
+  html.gp-platform-web .fiscal-overview-grid { display:flex !important; flex-direction:column !important; gap:8px !important; }
+  html.gp-platform-web .fiscal-card { width:100% !important; min-height:82px !important; padding:12px !important; display:grid !important; grid-template-columns:38px minmax(0,1fr) auto !important; grid-template-rows:auto auto !important; column-gap:10px !important; row-gap:3px !important; align-items:center !important; box-sizing:border-box !important; }
+  html.gp-platform-web .fiscal-card-icon { grid-row:1/3 !important; width:38px !important; height:38px !important; }
+  html.gp-platform-web .fiscal-card small { display:none !important; }
+  html.gp-platform-web .fiscal-card h3 { margin:0 !important; font-size:14px !important; }
+  html.gp-platform-web .fiscal-card p { margin:0 !important; font-size:9.5px !important; line-height:1.3 !important; max-width:290px !important; }
+  html.gp-platform-web .fiscal-link { grid-column:3 !important; grid-row:1/3 !important; align-self:center !important; justify-self:end !important; padding:8px 0 8px 8px !important; font-size:0 !important; white-space:nowrap !important; }
+  html.gp-platform-web .fiscal-link::after { content:'›'; font-size:24px !important; color:#70e1d0 !important; }
+
+  html.gp-platform-web .fiscal-roadmap { margin-top:12px !important; padding:0 !important; border:0 !important; background:transparent !important; }
+  html.gp-platform-web .fiscal-section-head { align-items:center !important; margin-bottom:9px !important; }
+  html.gp-platform-web .fiscal-section-head h3 { font-size:15px !important; }
+  html.gp-platform-web .fiscal-roadmap-list { display:flex !important; flex-direction:column !important; gap:6px !important; }
+  html.gp-platform-web .fiscal-roadmap-item { width:100% !important; padding:10px 11px !important; align-items:center !important; box-sizing:border-box !important; }
+  html.gp-platform-web .fiscal-roadmap-item i { width:28px !important; height:28px !important; flex:0 0 28px !important; }
+  html.gp-platform-web .fiscal-roadmap-item b { font-size:11px !important; }
+  html.gp-platform-web .fiscal-roadmap-item span { margin-top:2px !important; font-size:9.5px !important; line-height:1.3 !important; }
+
+  html.gp-platform-web .fiscal-form-grid, html.gp-platform-web .fiscal-settings-grid { grid-template-columns:1fr !important; }
+  html.gp-platform-web .fiscal-kpis { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+  html.gp-platform-web .fiscal-setting { align-items:flex-start !important; }
+}
+
+/* === Gestor PRO Mobile Clean V3 · legibilidade e toque === */
+@media (max-width:760px){
+  html.gp-platform-web body{font-size:15px!important;line-height:1.45!important}
+  html.gp-platform-web button,html.gp-platform-web input,html.gp-platform-web select,html.gp-platform-web textarea{font-size:14px!important}
+  html.gp-platform-web .btn{min-height:42px}
+
+  /* Fiscal: menos texto pequeno, mais hierarquia e áreas de toque confortáveis. */
+  html.gp-platform-web .fiscal-kicker{font-size:11px!important;letter-spacing:.08em!important}
+  html.gp-platform-web .fiscal-head h2{font-size:22px!important}
+  html.gp-platform-web .fiscal-close{width:42px!important;height:42px!important;font-size:20px!important}
+  html.gp-platform-web .fiscal-dev-banner{padding:12px 13px!important;gap:10px!important}
+  html.gp-platform-web .fiscal-dev-banner b{font-size:13px!important;line-height:1.25!important}
+  html.gp-platform-web .fiscal-dev-banner span:not(.fiscal-status-badge){font-size:12px!important;line-height:1.4!important}
+  html.gp-platform-web .fiscal-status-badge{font-size:10px!important;padding:5px 8px!important}
+  html.gp-platform-web .fiscal-tabs{overflow-x:auto!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  html.gp-platform-web .fiscal-tabs::-webkit-scrollbar{display:none!important}
+  html.gp-platform-web .fiscal-tab{min-height:40px!important;font-size:12px!important;padding:9px 10px!important}
+  html.gp-platform-web .fiscal-card{min-height:88px!important;padding:14px!important;column-gap:12px!important}
+  html.gp-platform-web .fiscal-card-icon{width:42px!important;height:42px!important;font-size:18px!important}
+  html.gp-platform-web .fiscal-card h3{font-size:16px!important;line-height:1.2!important}
+  html.gp-platform-web .fiscal-card p{font-size:12px!important;line-height:1.4!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+  html.gp-platform-web .fiscal-link::after{font-size:28px!important}
+  html.gp-platform-web .fiscal-section-head h3{font-size:16px!important;line-height:1.2!important}
+  html.gp-platform-web .fiscal-section-head p{font-size:12px!important;line-height:1.4!important}
+  html.gp-platform-web .fiscal-roadmap-status,html.gp-platform-web .fiscal-coming{font-size:10px!important;padding:5px 8px!important}
+  html.gp-platform-web .fiscal-roadmap-item{min-height:62px!important;padding:12px!important;gap:10px!important}
+  html.gp-platform-web .fiscal-roadmap-item i{width:32px!important;height:32px!important;flex-basis:32px!important;font-size:13px!important}
+  html.gp-platform-web .fiscal-roadmap-item b{font-size:13px!important;line-height:1.25!important}
+  html.gp-platform-web .fiscal-roadmap-item span{font-size:11.5px!important;line-height:1.35!important}
+  html.gp-platform-web .fiscal-form-grid label{font-size:12px!important}
+  html.gp-platform-web .fiscal-form-grid input,html.gp-platform-web .fiscal-form-grid textarea,html.gp-platform-web .fiscal-form-grid select{font-size:14px!important;min-height:44px!important;padding:11px 12px!important}
+  html.gp-platform-web .fiscal-issue-actions span,html.gp-platform-web .fiscal-info-note{font-size:12px!important;line-height:1.45!important}
+  html.gp-platform-web .fiscal-kpis span{font-size:11px!important}
+  html.gp-platform-web .fiscal-kpis b{font-size:20px!important}
+  html.gp-platform-web .fiscal-empty p{font-size:12px!important;line-height:1.45!important}
+  html.gp-platform-web .fiscal-setting{padding:13px!important;min-height:58px!important}
+  html.gp-platform-web .fiscal-setting b{font-size:13px!important}
+  html.gp-platform-web .fiscal-setting div span{font-size:11.5px!important;line-height:1.4!important}
+  html.gp-platform-web .fiscal-setting-state{font-size:9.5px!important}
+}

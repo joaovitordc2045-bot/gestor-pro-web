@@ -1,0 +1,336 @@
+/* Gestor PRO - Hooks visuais por plataforma */
+.gp-only-pc,.gp-only-android,.gp-only-web{display:none!important}
+.gp-platform-pc .gp-only-pc{display:revert!important}
+.gp-platform-android .gp-only-android{display:revert!important}
+.gp-platform-web .gp-only-web{display:revert!important}
+
+.gp-platform-android .gp-hide-android,
+.gp-platform-web .gp-hide-web,
+.gp-platform-pc .gp-hide-pc{display:none!important}
+
+
+/* Etapa 6 - Android */
+.gp-platform-android .android-pc-only{display:none!important}
+.android-platform-notice{
+  display:none;
+  margin:10px 0 18px;
+  padding:14px 16px;
+  border:1px solid rgba(53,214,194,.25);
+  border-radius:12px;
+  background:rgba(53,214,194,.07);
+}
+.gp-platform-android .android-platform-notice{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.android-platform-notice strong{font-size:13px;color:#eafffb}
+.android-platform-notice span{font-size:12px;line-height:1.55;color:#9fb3bd}
+
+
+/* ============================================================
+   GESTOR PRO ANDROID · REFINAMENTO VISUAL ETAPA 6.1
+   Não altera PC nem Web.
+   ============================================================ */
+@media(max-width:820px){
+  .gp-platform-android body{
+    padding-bottom:82px!important;
+    background:#06151d!important;
+    overflow-x:hidden!important;
+  }
+
+  .gp-platform-android .wrap{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:14px 12px 96px!important;
+  }
+
+  /* Cabeçalho mobile mais compacto e organizado */
+  .gp-platform-android header{
+    display:grid!important;
+    grid-template-columns:1fr auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0 0 12px!important;
+    padding:6px 2px 8px!important;
+  }
+  .gp-platform-android header > div:first-child{
+    min-width:0!important;
+  }
+  .gp-platform-android .title-row{
+    gap:10px!important;
+    justify-content:flex-start!important;
+  }
+  .gp-platform-android .logo-mark-real{
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    border-radius:12px!important;
+  }
+  .gp-platform-android .title-row h1{
+    font-size:28px!important;
+    line-height:1!important;
+    letter-spacing:-.035em!important;
+    white-space:nowrap!important;
+  }
+  .gp-platform-android .subtitle{
+    margin-top:5px!important;
+    font-size:11px!important;
+    line-height:1.35!important;
+    color:#91aaa9!important;
+  }
+  .gp-platform-android .datetime-stack{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:7px!important;
+    min-width:0!important;
+  }
+  .gp-platform-android .datetime{
+    display:none!important;
+  }
+  .gp-platform-android .account-chip{
+    min-width:0!important;
+    padding:5px!important;
+    border-radius:12px!important;
+  }
+  .gp-platform-android .account-copy{
+    display:none!important;
+  }
+  .gp-platform-android .account-avatar{
+    width:34px!important;
+    height:34px!important;
+    min-width:34px!important;
+  }
+  .gp-platform-android .logout-btn{
+    width:32px!important;
+    height:32px!important;
+  }
+
+  /* Resumo inicial */
+  .gp-platform-android .executive-welcome{
+    display:block!important;
+    padding:14px!important;
+    margin-bottom:10px!important;
+    border-radius:14px!important;
+  }
+  .gp-platform-android .executive-welcome h2{
+    font-size:18px!important;
+  }
+  .gp-platform-android .executive-welcome p{
+    font-size:11px!important;
+    line-height:1.45!important;
+  }
+  .gp-platform-android .executive-new-client{
+    width:100%!important;
+    margin-top:12px!important;
+  }
+
+  /* Indicadores em grade consistente */
+  .gp-platform-android .stats{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:9px!important;
+    margin-bottom:12px!important;
+  }
+  .gp-platform-android .stats .stat{
+    min-width:0!important;
+    min-height:104px!important;
+    padding:13px!important;
+    border-radius:13px!important;
+  }
+  .gp-platform-android .stats .stat-value{
+    font-size:24px!important;
+  }
+  .gp-platform-android .stats .stat-label{
+    font-size:9px!important;
+  }
+  .gp-platform-android .stats .stat-detail{
+    font-size:9.5px!important;
+  }
+  .gp-platform-android .stats .stat-revenue{
+    grid-column:1/-1!important;
+    min-height:90px!important;
+  }
+
+  /* Gestor PRO Hoje: evita cartão excessivamente alto */
+  .gp-platform-android .gp-today{
+    padding:14px!important;
+    margin-bottom:12px!important;
+    border-radius:15px!important;
+  }
+  .gp-platform-android .gp-today-head{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:flex-start!important;
+    justify-content:space-between!important;
+    gap:10px!important;
+  }
+  .gp-platform-android .gp-today-title{
+    align-items:flex-start!important;
+  }
+  .gp-platform-android .gp-today-title h2{
+    font-size:16px!important;
+  }
+  .gp-platform-android .gp-today-title p{
+    font-size:10.5px!important;
+  }
+  .gp-platform-android .gp-today-score{
+    flex:0 0 auto!important;
+    text-align:right!important;
+  }
+  .gp-platform-android .gp-today-score strong{
+    font-size:21px!important;
+  }
+  .gp-platform-android .gp-today-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  .gp-platform-android .gp-today-item{
+    min-height:84px!important;
+    padding:11px!important;
+  }
+
+  /* Cartões principais */
+  .gp-platform-android .card,
+  .gp-platform-android .agenda-card,
+  .gp-platform-android .billing-section,
+  .gp-platform-android .admin-zone{
+    border-radius:14px!important;
+  }
+
+  /* Navegação inferior mais limpa */
+  .gp-platform-android .side-nav{
+    left:10px!important;
+    right:10px!important;
+    bottom:8px!important;
+    top:auto!important;
+    transform:none!important;
+    width:auto!important;
+    max-width:none!important;
+    height:62px!important;
+    min-height:62px!important;
+    padding:6px!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:3px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    border-radius:17px!important;
+    background:rgba(5,25,29,.97)!important;
+    backdrop-filter:blur(18px)!important;
+    -webkit-backdrop-filter:blur(18px)!important;
+    box-shadow:0 14px 35px rgba(0,0,0,.42)!important;
+    scrollbar-width:none!important;
+  }
+  .gp-platform-android .side-nav::-webkit-scrollbar{display:none!important}
+  .gp-platform-android .side-nav-brand,
+  .gp-platform-android .nav-separator,
+  .gp-platform-android .menu-group-label{
+    display:none!important;
+  }
+  .gp-platform-android .side-nav .nav-item{
+    width:48px!important;
+    min-width:48px!important;
+    height:48px!important;
+    min-height:48px!important;
+    padding:0!important;
+    margin:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:12px!important;
+    box-shadow:none!important;
+  }
+  .gp-platform-android .side-nav .nav-text{
+    display:none!important;
+  }
+  .gp-platform-android .side-nav .nav-item.active{
+    background:rgba(53,214,194,.12)!important;
+    box-shadow:inset 0 -3px 0 #35d6c2!important;
+  }
+
+  /* Parceiro deixa de ocupar metade da barra */
+  .gp-platform-android .partner-nav-cta{
+    width:48px!important;
+    min-width:48px!important;
+    height:48px!important;
+    min-height:48px!important;
+    padding:0!important;
+    margin:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:12px!important;
+    flex:0 0 48px!important;
+  }
+  .gp-platform-android .partner-nav-icon{
+    width:32px!important;
+    height:32px!important;
+    min-width:32px!important;
+    margin:0!important;
+  }
+  .gp-platform-android .partner-nav-copy{
+    display:none!important;
+  }
+
+  /* Nenhum painel lateral flutuante no celular */
+  .gp-platform-android .gp-today-panel{
+    display:none!important;
+  }
+
+  /* Login: evita saltos, overflow e piscadas de layout */
+  .gp-platform-android .auth-gate{
+    min-height:100dvh!important;
+    padding:14px!important;
+    background:
+      radial-gradient(480px 360px at 10% 5%,rgba(53,214,194,.10),transparent 70%),
+      #06151d!important;
+  }
+  .gp-platform-android .auth-shell{
+    width:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    display:block!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+  }
+  .gp-platform-android .auth-brand{
+    display:none!important;
+  }
+  .gp-platform-android .auth-panel{
+    width:100%!important;
+    min-height:calc(100dvh - 28px)!important;
+    padding:24px 18px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .gp-platform-android .auth-form-wrap{
+    width:100%!important;
+    max-width:480px!important;
+    margin:auto!important;
+  }
+  .gp-platform-android .auth-form-title{
+    font-size:25px!important;
+  }
+  .gp-platform-android .auth-form-subtitle{
+    font-size:12px!important;
+  }
+  .gp-platform-android .auth-field input{
+    min-height:46px!important;
+    font-size:14px!important;
+  }
+  .gp-platform-android .auth-submit{
+    min-height:48px!important;
+  }
+}
+
+/* Celulares estreitos */
+@media(max-width:390px){
+  .gp-platform-android .wrap{padding-left:10px!important;padding-right:10px!important}
+  .gp-platform-android .title-row h1{font-size:25px!important}
+  .gp-platform-android .logo-mark-real{width:38px!important;height:38px!important;min-width:38px!important}
+  .gp-platform-android .stats{gap:7px!important}
+  .gp-platform-android .stats .stat{padding:11px!important}
+  .gp-platform-android .gp-today-grid{grid-template-columns:1fr!important}
+}

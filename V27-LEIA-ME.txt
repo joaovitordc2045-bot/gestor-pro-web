@@ -1,0 +1,11 @@
+GESTOR PRO FISCAL V27 - COFRE DE CERTIFICADO A1
+
+1) Execute web/sql-v27-cofre-certificado.sql no SQL Editor.
+2) No Supabase > Edge Functions > Secrets, crie FISCAL_MASTER_KEY_B64 com uma chave aleatória de 32 bytes em Base64.
+   PowerShell para gerar:
+   $b=New-Object byte[] 32; [Security.Cryptography.RandomNumberGenerator]::Fill($b); [Convert]::ToBase64String($b)
+3) Publique a Edge Function web/supabase/functions/nfse-configurar-certificado/index.ts com nome nfse-configurar-certificado.
+4) Publique a Web.
+5) Fiscal > Integração NFS-e > Cofre seguro do certificado A1.
+
+A V27 NÃO assina nem transmite NFS-e. Ela apenas criptografa e armazena a credencial no backend para a próxima etapa.

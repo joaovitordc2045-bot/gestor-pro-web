@@ -1,0 +1,205 @@
+/* Gestor PRO Fiscal — acabamento mobile final
+   Carregado por ultimo para neutralizar regras antigas conflitantes sem alterar o desktop. */
+@media (max-width: 900px){
+  #fiscalModal.fiscal-modal-overlay{padding:0!important;inset:0!important;background:#071820!important}
+  #fiscalModal .fiscal-shell{width:100vw!important;height:100dvh!important;max-width:none!important;max-height:none!important;border:0!important;border-radius:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  #fiscalModal .fiscal-head{flex:0 0 auto!important;padding:18px 18px 16px!important;min-height:92px!important;box-sizing:border-box!important}
+  #fiscalModal .fiscal-head-copy{gap:12px!important;min-width:0!important}
+  #fiscalModal .fiscal-icon{width:48px!important;height:48px!important;flex:0 0 48px!important}
+  #fiscalModal .fiscal-kicker{font-size:11px!important;letter-spacing:.08em!important}
+  #fiscalModal .fiscal-head h2{font-size:25px!important;line-height:1.1!important}
+  #fiscalModal .fiscal-head p{display:none!important}
+  #fiscalModal .fiscal-close{width:44px!important;height:44px!important;flex:0 0 44px!important}
+
+  #fiscalModal .fiscal-dev-banner{flex:0 0 auto!important;margin:12px 16px 10px!important;padding:14px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:10px 12px!important;border-radius:14px!important}
+  #fiscalModal .fiscal-dev-mark{display:none!important}
+  #fiscalModal .fiscal-dev-banner>div:nth-child(2){min-width:0!important}
+  #fiscalModal .fiscal-dev-banner b{font-size:14px!important}
+  #fiscalModal .fiscal-dev-banner span:not(.fiscal-status-badge){font-size:12px!important;line-height:1.45!important;margin-top:4px!important}
+  #fiscalModal .fiscal-status-badge{align-self:center!important;font-size:9px!important;padding:6px 8px!important}
+
+  #fiscalModal .fiscal-tabs{position:relative!important;flex:0 0 auto!important;display:flex!important;gap:8px!important;width:100%!important;padding:4px 16px 10px!important;margin:0!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x proximity!important;scroll-padding-inline:16px!important;scrollbar-width:none!important;background:#071820!important;-webkit-overflow-scrolling:touch!important}
+  #fiscalModal .fiscal-tabs::-webkit-scrollbar{display:none!important}
+  #fiscalModal .fiscal-tab{flex:0 0 auto!important;min-height:44px!important;padding:10px 14px!important;font-size:13px!important;white-space:nowrap!important;scroll-snap-align:start!important;border-radius:11px!important}
+  #fiscalModal .fiscal-tab span{display:none!important}
+
+  #fiscalModal .fiscal-body{flex:1 1 auto!important;min-height:0!important;width:100%!important;padding:12px 16px calc(32px + env(safe-area-inset-bottom))!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important;box-sizing:border-box!important}
+  #fiscalModal .fiscal-panel{width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important}
+  #fiscalModal .fiscal-roadmap{display:none!important}
+
+  #fiscalModal .fiscal-overview-grid{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+  #fiscalModal .fiscal-card{width:100%!important;min-height:116px!important;padding:16px!important;grid-template-columns:48px minmax(0,1fr) 32px!important;column-gap:12px!important;border-radius:16px!important}
+  #fiscalModal .fiscal-card-icon{width:46px!important;height:46px!important}
+  #fiscalModal .fiscal-card h3{font-size:18px!important;margin:0 0 4px!important}
+  #fiscalModal .fiscal-card p{font-size:13px!important;line-height:1.4!important;-webkit-line-clamp:2!important}
+
+  #fiscalModal .fiscal-section-head{display:flex!important;align-items:flex-start!important;gap:10px!important;margin:0 0 14px!important}
+  #fiscalModal .fiscal-section-head>div{min-width:0!important;flex:1!important}
+  #fiscalModal .fiscal-section-head small{font-size:10px!important;letter-spacing:.12em!important}
+  #fiscalModal .fiscal-section-head h3{font-size:22px!important;line-height:1.2!important;margin:5px 0 5px!important}
+  #fiscalModal .fiscal-section-head p{font-size:13px!important;line-height:1.45!important;margin:0!important}
+  #fiscalModal .fiscal-coming{font-size:9px!important;padding:6px 8px!important}
+  #fiscalModal .fiscal-issue-notice{display:flex!important;align-items:flex-start!important;gap:9px!important;padding:13px!important;font-size:13px!important;line-height:1.45!important;border-radius:14px!important}
+
+  #fiscalModal .fiscal-readiness{padding:16px!important;margin:14px 0!important;border-radius:16px!important}
+  #fiscalModal .fiscal-readiness-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
+  #fiscalModal .fiscal-readiness-head h4{font-size:19px!important;line-height:1.25!important;margin:4px 0!important}
+  #fiscalModal .fiscal-readiness-head p{font-size:13px!important;line-height:1.45!important}
+  #fiscalModal .fiscal-readiness-list{display:grid!important;grid-template-columns:1fr!important;gap:9px!important}
+  #fiscalModal .fiscal-readiness-item{min-width:0!important;padding:13px!important;grid-template-columns:36px minmax(0,1fr) auto!important;gap:10px!important}
+  #fiscalModal .fiscal-readiness-item b{font-size:14px!important;line-height:1.3!important}
+  #fiscalModal .fiscal-readiness-item span{font-size:12px!important;line-height:1.35!important}
+
+  #fiscalModal .fiscal-form-grid,
+  #fiscalModal .fiscal-company-grid,
+  #fiscalModal .fiscal-service-editor,
+  #fiscalModal .fiscal-tax-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;width:100%!important}
+  #fiscalModal .fiscal-form-grid label,
+  #fiscalModal .fiscal-company-grid label,
+  #fiscalModal .fiscal-service-editor label,
+  #fiscalModal .fiscal-tax-grid label{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:7px!important;width:100%!important;min-width:0!important;margin:0!important;grid-column:auto!important}
+  #fiscalModal .fiscal-form-grid label>span,
+  #fiscalModal .fiscal-company-grid label>span,
+  #fiscalModal .fiscal-service-editor label>span,
+  #fiscalModal .fiscal-tax-grid label>span{display:block!important;width:auto!important;font-size:13px!important;line-height:1.35!important;font-weight:700!important;margin:0!important;position:static!important;transform:none!important}
+  #fiscalModal input,#fiscalModal select,#fiscalModal textarea{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;margin:0!important;font-size:16px!important;line-height:1.35!important;border-radius:12px!important}
+  #fiscalModal input,#fiscalModal select{min-height:50px!important;padding:12px 14px!important}
+  #fiscalModal textarea{min-height:112px!important;padding:13px 14px!important;resize:vertical!important}
+  #fiscalModal .fiscal-service-editor textarea{min-height:120px!important}
+  #fiscalModal .fiscal-service-picker{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;width:100%!important}
+  #fiscalModal .fiscal-service-new{width:100%!important;min-height:48px!important}
+
+  #fiscalModal .fiscal-form-section{width:100%!important;margin:0 0 22px!important;padding:0!important}
+  #fiscalModal .fiscal-form-section-title{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:5px!important;margin:0 0 14px!important;width:100%!important}
+  #fiscalModal .fiscal-form-section-title>div{display:flex!important;flex-direction:column!important;gap:5px!important;width:100%!important}
+  #fiscalModal .fiscal-form-section-title b{display:block!important;font-size:18px!important;line-height:1.25!important}
+  #fiscalModal .fiscal-form-section-title span{display:block!important;font-size:13px!important;line-height:1.45!important;margin:0!important}
+  #fiscalModal .fiscal-saved-badge{align-self:flex-start!important;margin-top:4px!important}
+
+  #fiscalModal .fiscal-tax-block{width:100%!important;box-sizing:border-box!important;padding:14px!important;border-radius:15px!important;grid-column:auto!important}
+  #fiscalModal .fiscal-tax-block-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:9px!important;margin-bottom:14px!important}
+  #fiscalModal .fiscal-tax-block-head>div{min-width:0!important}
+  #fiscalModal .fiscal-tax-block-head b{font-size:16px!important;line-height:1.3!important}
+  #fiscalModal .fiscal-tax-block-head>div>span{font-size:12.5px!important;line-height:1.45!important}
+
+  #fiscalModal .fiscal-service-editor-actions,
+  #fiscalModal .fiscal-form-actions,
+  #fiscalModal .fiscal-issue-actions{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important;width:100%!important}
+  #fiscalModal .fiscal-action-buttons,
+  #fiscalModal .fiscal-issue-buttons{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;width:100%!important}
+  #fiscalModal .fiscal-action-buttons .btn,
+  #fiscalModal .fiscal-issue-buttons .btn,
+  #fiscalModal .fiscal-service-editor-actions .btn{width:100%!important;min-height:50px!important}
+  #fiscalModal .fiscal-form-actions>span,#fiscalModal .fiscal-issue-actions>span{font-size:12.5px!important;line-height:1.45!important}
+
+  #fiscalModal .fiscal-service-list{gap:12px!important}
+  #fiscalModal .fiscal-service-item{width:100%!important;box-sizing:border-box!important;padding:15px!important;border-radius:15px!important;flex-direction:column!important;align-items:stretch!important}
+  #fiscalModal .fiscal-service-item>div:last-child{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;width:100%!important}
+  #fiscalModal .fiscal-service-item button{min-height:46px!important;font-size:14px!important}
+
+  #fiscalModal .fiscal-info-note{display:flex!important;flex-direction:column!important;gap:5px!important;padding:14px!important;border-radius:14px!important;font-size:12.5px!important;line-height:1.45!important}
+  #fiscalModal .fiscal-info-note b,#fiscalModal .fiscal-info-note span{display:block!important;margin:0!important}
+
+  #fiscalModal .fiscal-preview-grid{grid-template-columns:1fr!important}
+  #fiscalModal .fiscal-preview-grid .wide{grid-column:auto!important}
+  #fiscalModal .fiscal-draft-kpis{grid-template-columns:1fr 1fr!important}
+  #fiscalModal .fiscal-draft-kpis>div:last-child{grid-column:1/-1!important}
+  #fiscalModal .fiscal-draft-item,#fiscalModal .fiscal-engine-item{min-width:0!important;max-width:100%!important}
+  #fiscalModal .fiscal-engine-grid{grid-template-columns:1fr!important}
+}
+
+@media (max-width: 430px){
+  #fiscalModal .fiscal-head{padding:16px 14px 14px!important}
+  #fiscalModal .fiscal-dev-banner{margin:10px 12px 8px!important;padding:12px!important}
+  #fiscalModal .fiscal-tabs{padding:4px 12px 9px!important;scroll-padding-inline:12px!important}
+  #fiscalModal .fiscal-body{padding:10px 14px calc(28px + env(safe-area-inset-bottom))!important}
+  #fiscalModal .fiscal-dev-banner{grid-template-columns:1fr!important}
+  #fiscalModal .fiscal-status-badge{justify-self:start!important}
+  #fiscalModal .fiscal-readiness-item{grid-template-columns:34px minmax(0,1fr)!important}
+  #fiscalModal .fiscal-readiness-item>*:last-child{grid-column:2!important;justify-self:start!important}
+}
+
+/* ==========================================================
+   POLIMENTO FINAL + FLUIDEZ MOBILE
+   - viewport estável: evita reflow quando a barra do Chrome muda
+   - reduz efeitos caros durante rolagem
+   - mantém todos os blocos renderizados para não "aparecerem atrasados"
+   ========================================================== */
+@media (max-width: 900px){
+  #fiscalModal.fiscal-modal-overlay{
+    height:100svh!important;
+    min-height:100svh!important;
+    max-height:100svh!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    overscroll-behavior:none!important;
+  }
+  #fiscalModal .fiscal-shell{
+    height:100svh!important;
+    min-height:100svh!important;
+    max-height:100svh!important;
+    box-shadow:none!important;
+    filter:none!important;
+    transform:none!important;
+  }
+  #fiscalModal .fiscal-body{
+    scroll-behavior:auto!important;
+    scroll-snap-type:none!important;
+    -webkit-overflow-scrolling:auto!important;
+    overscroll-behavior-y:contain!important;
+    touch-action:pan-y!important;
+    content-visibility:visible!important;
+    contain:none!important;
+  }
+  #fiscalModal .fiscal-panel,
+  #fiscalModal .fiscal-form-section,
+  #fiscalModal .fiscal-readiness,
+  #fiscalModal .fiscal-engine-hero,
+  #fiscalModal .fiscal-engine-grid,
+  #fiscalModal .fiscal-engine-attempts,
+  #fiscalModal .fiscal-service-list,
+  #fiscalModal .fiscal-draft-list{
+    content-visibility:visible!important;
+    contain:none!important;
+  }
+  #fiscalModal .fiscal-tabs{
+    scroll-snap-type:none!important;
+    scroll-behavior:auto!important;
+  }
+  #fiscalModal *,
+  #fiscalModal *::before,
+  #fiscalModal *::after{
+    animation:none!important;
+    transition-duration:0s!important;
+  }
+  #fiscalModal .fiscal-card,
+  #fiscalModal .fiscal-readiness,
+  #fiscalModal .fiscal-tax-block,
+  #fiscalModal .fiscal-service-item,
+  #fiscalModal .fiscal-engine-hero,
+  #fiscalModal .fiscal-engine-grid>article,
+  #fiscalModal .fiscal-engine-attempts,
+  #fiscalModal .fiscal-info-note{
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    filter:none!important;
+  }
+  #fiscalModal .fiscal-dev-banner{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  #fiscalModal .fiscal-status-badge{
+    justify-self:start!important;
+    align-self:start!important;
+  }
+  #fiscalModal .fiscal-kicker span{font-size:inherit!important}
+}
+
+@media (max-width: 420px){
+  #fiscalModal .fiscal-head{padding:15px 14px 13px!important;min-height:84px!important}
+  #fiscalModal .fiscal-dev-banner{margin:10px 12px 8px!important;padding:12px!important}
+  #fiscalModal .fiscal-tabs{padding-left:12px!important;padding-right:12px!important;scroll-padding-inline:12px!important}
+  #fiscalModal .fiscal-body{padding-left:12px!important;padding-right:12px!important}
+  #fiscalModal .fiscal-section-head h3{font-size:21px!important}
+  #fiscalModal .fiscal-readiness{padding:14px!important}
+}

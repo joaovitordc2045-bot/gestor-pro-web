@@ -1,0 +1,71 @@
+/* Fiscal V13 — legibilidade e padrão clean */
+#fiscalModal{font-size:15px}
+#fiscalModal .fiscal-shell{line-height:1.48}
+#fiscalModal .fiscal-title h2,#fiscalModal h2{font-size:30px;line-height:1.15}
+#fiscalModal .fiscal-title p,#fiscalModal .fiscal-subtitle{font-size:14.5px;line-height:1.5}
+#fiscalModal .fiscal-dev-banner strong{font-size:16px}
+#fiscalModal .fiscal-dev-banner p,#fiscalModal .fiscal-dev-banner span:not(.fiscal-dev-badge){font-size:14px;line-height:1.5}
+#fiscalModal .fiscal-tab{font-size:14.5px;font-weight:800;min-height:46px;padding:0 16px}
+#fiscalModal .fiscal-section-kicker{font-size:12.5px;letter-spacing:.08em}
+#fiscalModal .fiscal-section-title,#fiscalModal .fiscal-panel-title{font-size:21px;line-height:1.25}
+#fiscalModal .fiscal-section-copy,#fiscalModal .fiscal-panel-copy{font-size:14px;line-height:1.5}
+
+/* Formulários */
+#fiscalModal .fiscal-form-grid label,
+#fiscalModal .fiscal-field label{font-size:13.5px;font-weight:800;line-height:1.35}
+#fiscalModal .fiscal-form-grid input,
+#fiscalModal .fiscal-form-grid select,
+#fiscalModal .fiscal-form-grid textarea{font-size:15px;line-height:1.45;min-height:50px}
+#fiscalModal .fiscal-form-grid textarea{min-height:110px}
+#fiscalModal .fiscal-issue-notice{font-size:13.5px;line-height:1.5;padding:14px 16px}
+#fiscalModal .btn,#fiscalModal button{font-size:13.5px}
+
+/* Catálogo de serviços */
+#fiscalModal .fiscal-service-item{padding:16px 18px;gap:18px}
+#fiscalModal .fiscal-service-item b{font-size:15.5px;line-height:1.35}
+#fiscalModal .fiscal-service-item span{font-size:13.5px;line-height:1.45}
+#fiscalModal .fiscal-service-item small{font-size:13px}
+#fiscalModal .fiscal-service-empty{font-size:14px;line-height:1.5}
+
+/* Prévia NFS-e */
+#fiscalModal .fiscal-nfse-preview{padding:22px;border-radius:16px}
+#fiscalModal .fiscal-preview-head{padding-bottom:17px}
+#fiscalModal .fiscal-preview-head small{font-size:12.5px}
+#fiscalModal .fiscal-preview-head h4{font-size:21px;line-height:1.25;margin-top:5px}
+#fiscalModal .fiscal-preview-head>span{font-size:10.5px;padding:7px 11px}
+#fiscalModal .fiscal-preview-grid{gap:14px;margin-top:16px}
+#fiscalModal .fiscal-preview-grid>div{padding:16px 17px;min-height:78px}
+#fiscalModal .fiscal-preview-grid small{font-size:11.5px;letter-spacing:.025em}
+#fiscalModal .fiscal-preview-grid b{font-size:15.5px;line-height:1.4;margin-top:6px}
+#fiscalModal .fiscal-preview-grid span{font-size:13px;line-height:1.4;margin-top:4px}
+#fiscalModal .fiscal-preview-foot{font-size:12.5px;line-height:1.45;margin-top:16px}
+
+/* Mensagens de estado */
+#fiscalModal .fiscal-save-status,
+#fiscalModal .fiscal-preview-status,
+#fiscalModal [data-fiscal-status]{font-size:13.5px;line-height:1.45}
+
+@media (max-width:900px){
+  #fiscalModal{font-size:14.5px}
+  #fiscalModal .fiscal-title h2,#fiscalModal h2{font-size:25px}
+  #fiscalModal .fiscal-title p,#fiscalModal .fiscal-subtitle{font-size:13.5px}
+  #fiscalModal .fiscal-dev-banner strong{font-size:15px}
+  #fiscalModal .fiscal-dev-banner p,#fiscalModal .fiscal-dev-banner span:not(.fiscal-dev-badge){font-size:13px}
+  #fiscalModal .fiscal-tab{font-size:13.5px;min-height:44px;padding:0 13px}
+  #fiscalModal .fiscal-section-title,#fiscalModal .fiscal-panel-title{font-size:19px}
+  #fiscalModal .fiscal-section-copy,#fiscalModal .fiscal-panel-copy{font-size:13.5px}
+  #fiscalModal .fiscal-form-grid label,#fiscalModal .fiscal-field label{font-size:13px}
+  #fiscalModal .fiscal-form-grid input,#fiscalModal .fiscal-form-grid select,#fiscalModal .fiscal-form-grid textarea{font-size:15px}
+  #fiscalModal .fiscal-issue-notice{font-size:13px}
+  #fiscalModal .fiscal-preview-head h4{font-size:18px}
+  #fiscalModal .fiscal-preview-head small{font-size:11.5px}
+  #fiscalModal .fiscal-preview-head>span{font-size:9.5px}
+  #fiscalModal .fiscal-preview-grid>div{padding:15px;min-height:72px}
+  #fiscalModal .fiscal-preview-grid small{font-size:11px}
+  #fiscalModal .fiscal-preview-grid b{font-size:15px}
+  #fiscalModal .fiscal-preview-grid span{font-size:12.5px}
+  #fiscalModal .fiscal-preview-foot{font-size:12px}
+  #fiscalModal .fiscal-service-item b{font-size:15px}
+  #fiscalModal .fiscal-service-item span{font-size:13px}
+  #fiscalModal .fiscal-service-item small{font-size:12.5px}
+}

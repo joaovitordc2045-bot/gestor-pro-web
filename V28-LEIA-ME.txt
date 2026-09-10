@@ -1,0 +1,10 @@
+GESTOR PRO FISCAL V28 - VALIDACAO LOCAL DO CERTIFICADO A1
+
+1) Execute web/sql-v28-validacao-certificado.sql no Supabase.
+2) Publique a Edge Function web/supabase/functions/nfse-validar-certificado/index.ts com o nome exato: nfse-validar-certificado
+3) Nao altere o secret FISCAL_MASTER_KEY_B64 criado na V27. Trocar essa chave impede abrir certificados ja armazenados.
+4) Publique a pasta web.
+5) Em Fiscal > Integracao NFS-e, se houver A1 no cofre, clique em Validar certificado A1.
+
+A V28 valida localmente no backend: abertura PKCS#12/senha, presenca de chave privada, periodo de validade e CNPJ do titular no SAN ICP-Brasil (OID 2.16.76.1.3.3) comparado ao CNPJ cadastrado.
+NAO verifica ainda cadeia de confianca/revogacao (CRL/OCSP), NAO assina a DPS e NAO transmite a SEFIN.

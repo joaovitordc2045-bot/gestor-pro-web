@@ -1,0 +1,9 @@
+/* V19 — classificação tributária dos serviços */
+.fiscal-tax-block{border:1px solid rgba(96,221,207,.18);background:rgba(8,31,38,.36);border-radius:14px;padding:16px;margin-top:2px}
+.fiscal-tax-block-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.fiscal-tax-block-head>div{display:grid;gap:3px}.fiscal-tax-block-head b{font-weight:650}.fiscal-tax-block-head span{color:var(--muted,#91a7aa);font-size:13px}.fiscal-tax-block-head>span{font-size:10px;color:#63e7d7;border:1px solid rgba(71,220,201,.25);border-radius:999px;padding:5px 8px;letter-spacing:.04em}
+.fiscal-tax-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fiscal-tax-block>p{margin:11px 0 0;color:var(--muted,#91a7aa);font-size:12.5px}
+.fiscal-service-taxline{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:6px}.fiscal-service-taxline small{font-size:12px;color:#8fa8aa;font-weight:400}
+.fiscal-preview-tax{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border:1px solid rgba(96,221,207,.16);border-radius:12px;background:rgba(7,31,38,.3);margin-top:12px}.fiscal-preview-tax>div{display:grid;gap:4px}.fiscal-preview-tax small{font-size:10.5px;color:#72d8cd;letter-spacing:.05em}.fiscal-preview-tax b{font-weight:600}.fiscal-preview-tax>span{font-size:13px;color:#9bb0b3;text-align:right}
+@media(max-width:900px){.fiscal-tax-grid{grid-template-columns:1fr}.fiscal-preview-tax{align-items:flex-start;flex-direction:column}.fiscal-preview-tax>span{text-align:left}}
+@media(max-width:560px){.fiscal-tax-block{padding:13px}.fiscal-tax-block-head{flex-direction:column}.fiscal-tax-grid{gap:10px}}

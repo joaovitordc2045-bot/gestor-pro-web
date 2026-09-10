@@ -1,0 +1,67 @@
+/* Gestor PRO — Dashboard Clean V1
+   Objetivo: reduzir poluicao visual sem remover funcionalidades. */
+
+/* Painel principal: 4 KPIs essenciais. Mantemos o KPI 'vence em breve' no DOM para o JS. */
+.stats{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+.stats .stat:nth-child(3){display:none!important}
+.stat{min-height:104px!important;padding:16px 18px!important;background:linear-gradient(180deg,rgba(7,28,38,.92),rgba(5,22,31,.94))!important;border-color:rgba(84,206,194,.13)!important;box-shadow:0 8px 24px rgba(0,0,0,.10)!important}
+.stat-label{font-size:11px!important;opacity:.82!important}
+.stat-value{font-size:29px!important}
+
+/* Resumo do dia mais curto: mostra apenas o que exige atencao. */
+.gp-today{padding:18px!important;margin:0 0 14px!important;min-height:0!important}
+.gp-today-head{margin-bottom:12px!important}
+.gp-today-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+.gp-today-grid .gp-today-item:nth-child(3),
+.gp-today-grid .gp-today-item:nth-child(4){display:none!important}
+.gp-today-actions{margin-top:12px!important}
+.gp-today-actions #gpTodayClientsBtn{display:none!important}
+
+/* Conteudo redundante sai da visao inicial, mas continua no codigo para uso futuro em Relatorios. */
+.dashboard-brief,
+.gp-intelligence-grid,
+#dashboardInsights{display:none!important}
+
+/* Grafico e clientes recentes viram o nucleo visual da pagina. */
+.dashboard-lower-grid{grid-template-columns:minmax(0,1.45fr) minmax(330px,.72fr)!important;gap:14px!important;margin-bottom:14px!important}
+.chart-card,.dashboard-recent-card{border-color:rgba(84,206,194,.13)!important;box-shadow:0 8px 26px rgba(0,0,0,.11)!important}
+.chart-wrap,.home-chart .chart-wrap{height:230px!important;min-height:230px!important}
+
+/* Agenda mais limpa e com separacao clara. */
+#agendaSection{margin-top:14px!important}
+.agenda-card{border-color:rgba(84,206,194,.13)!important}
+
+/* Menu: menos ruido visual. Funcoes continuam acessiveis. */
+.side-nav{gap:3px!important}
+.menu-group-label{margin-top:14px!important;opacity:.58!important;letter-spacing:.10em!important}
+.nav-item{border-radius:10px!important;min-height:43px!important}
+.nav-item[data-scroll-only="true"]{display:none!important}
+.facebook-nav{opacity:.78}
+
+/* Desktop: area de trabalho um pouco mais arejada. */
+@media (min-width:1281px){
+  .side-nav{width:222px!important;padding-left:12px!important;padding-right:12px!important}
+  .wrap{margin-left:242px!important;max-width:1600px!important;padding-left:20px!important;padding-right:20px!important}
+}
+
+/* Notebook */
+@media (min-width:761px) and (max-width:1280px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-lower-grid{grid-template-columns:1fr!important}
+}
+
+/* Mobile: leitura linear, sem cards gigantes nem secoes redundantes. */
+@media (max-width:760px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .stat{min-height:88px!important;padding:13px!important}
+  .stat-label{font-size:10px!important}
+  .stat-value{font-size:24px!important}
+  .stat-revenue{grid-column:1/-1!important}
+  .gp-today{padding:15px!important}
+  .gp-today-grid{grid-template-columns:1fr!important}
+  .gp-today-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .gp-today-actions .btn{width:100%!important;min-width:0!important}
+  .dashboard-lower-grid{grid-template-columns:1fr!important}
+  .chart-wrap,.home-chart .chart-wrap{height:205px!important;min-height:205px!important}
+  .dashboard-recent-card{padding:16px!important}
+}

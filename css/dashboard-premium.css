@@ -1,0 +1,518 @@
+
+/* Gestor PRO — visual premium inspirado no modelo aprovado */
+:root{
+  --gp-bg:#04131c;--gp-panel:#071c26;--gp-panel-2:#0a2330;--gp-line:rgba(66,211,198,.18);
+  --gp-text:#eef7fb;--gp-muted:#96adba;--gp-teal:#2ed3c2;--gp-green:#2fe39a;--gp-blue:#39a8ff;
+  --gp-red:#ff5a73;--gp-purple:#8e78ff;--gp-shadow:0 16px 45px rgba(0,0,0,.24);
+}
+html,body{background:#031019!important;color:var(--gp-text)}
+body{font-size:15px}
+.tech-background{opacity:.38!important;filter:saturate(.85)}
+.wrap{max-width:none!important;padding:26px 30px 54px!important;margin-left:250px!important}
+.side-nav{width:232px!important;background:linear-gradient(180deg,rgba(3,18,27,.99),rgba(4,22,31,.98))!important;border-right:1px solid rgba(82,202,192,.15)!important;box-shadow:18px 0 45px rgba(0,0,0,.18)!important;padding:18px 14px!important}
+.side-nav-brand{padding:6px 8px 20px!important;margin-bottom:8px!important;border-bottom:1px solid rgba(255,255,255,.05)!important}
+.side-nav-brand-mark{width:42px!important;height:42px!important;border-radius:12px!important;box-shadow:0 0 26px rgba(46,211,194,.2)}
+.side-nav-brand strong,.side-nav-brand .brand-name{font-size:20px!important;letter-spacing:-.02em}
+.menu-group-label{font-size:10px!important;letter-spacing:.16em!important;color:#5f7b89!important;margin:16px 10px 8px!important}
+.nav-item{min-height:46px!important;border-radius:11px!important;padding:0 13px!important;font-size:14px!important;color:#b9cad3!important;border:1px solid transparent!important;transition:.18s ease!important}
+.nav-item:hover{background:rgba(46,211,194,.07)!important;color:#fff!important;border-color:rgba(46,211,194,.08)!important;transform:translateX(2px)}
+.nav-item.active{background:linear-gradient(90deg,rgba(29,200,183,.23),rgba(29,200,183,.10))!important;color:#fff!important;border-color:rgba(46,211,194,.16)!important;box-shadow:inset 3px 0 0 var(--gp-teal)}
+.nav-icon{font-size:18px!important;color:#9fb7c5!important}.nav-item.active .nav-icon{color:var(--gp-teal)!important}
+.partner-nav-cta{border-radius:12px!important;background:linear-gradient(135deg,rgba(46,211,194,.12),rgba(46,211,194,.04))!important;border:1px solid rgba(46,211,194,.16)!important;box-shadow:none!important}
+
+#overviewSection{background:rgba(5,22,31,.76)!important;border:1px solid rgba(72,204,193,.12)!important;border-radius:15px!important;padding:13px 16px!important;margin-bottom:18px!important;box-shadow:0 10px 28px rgba(0,0,0,.12)!important;backdrop-filter:blur(12px)}
+#overviewSection .title-row h1{font-size:18px!important}.subtitle{font-size:12px!important;color:var(--gp-muted)!important}.datetime{font-size:12px!important}.account-chip{background:rgba(255,255,255,.025)!important;border-color:rgba(255,255,255,.07)!important}
+
+.executive-welcome{padding:10px 4px 20px!important;background:transparent!important;border:0!important;box-shadow:none!important;align-items:flex-end!important}
+.executive-welcome-kicker{display:none!important}.executive-welcome h2{font-size:34px!important;line-height:1.05!important;letter-spacing:-.035em!important;margin:0 0 7px!important;color:#fff!important}
+.executive-welcome p{font-size:15px!important;color:#a8bdc8!important;margin:0!important}.executive-new-client{min-height:42px!important;border-radius:10px!important;padding:0 18px!important;box-shadow:0 10px 28px rgba(46,211,194,.14)!important}
+
+.stats{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin:0 0 16px!important}
+.stat{position:relative!important;overflow:hidden!important;min-height:126px!important;padding:18px!important;border-radius:14px!important;background:linear-gradient(145deg,rgba(8,34,45,.96),rgba(6,24,34,.97))!important;border:1px solid rgba(49,210,194,.17)!important;box-shadow:var(--gp-shadow)!important}
+.stat::after{content:"";position:absolute;inset:auto -25px -45px auto;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(46,211,194,.10),transparent 66%);pointer-events:none}
+.stat-label{font-size:11px!important;letter-spacing:.08em!important;color:#9eb0bb!important;font-weight:700!important}.stat-value{font-size:31px!important;letter-spacing:-.035em!important;margin-top:11px!important;color:#fff!important}.stat-value.green{color:var(--gp-green)!important}.stat-value.yellow{color:#f8c650!important}.stat-value.red{color:var(--gp-red)!important}.stat-revenue{background:linear-gradient(145deg,rgba(10,31,54,.97),rgba(8,24,43,.98))!important;border-color:rgba(57,168,255,.18)!important}.stat-detail{font-size:11px!important;color:#8da4b2!important;margin-top:5px!important}
+
+.dashboard-insights{display:grid!important;grid-template-columns:1.08fr 1.25fr .9fr!important;gap:14px!important;margin:0 0 16px!important}
+.dashboard-insight-card,.card,.gp-today{background:linear-gradient(180deg,rgba(7,28,38,.96),rgba(5,22,31,.97))!important;border:1px solid rgba(54,205,192,.17)!important;border-radius:15px!important;box-shadow:var(--gp-shadow)!important}
+.dashboard-insight-card{min-height:270px!important;padding:20px!important}.insight-head h2{font-size:19px!important;color:#fff!important;letter-spacing:-.02em!important}.insight-head p{font-size:12px!important;color:#93aab7!important;margin-top:5px!important}.status-donut{width:150px!important;height:150px!important;filter:drop-shadow(0 8px 22px rgba(0,0,0,.18))}.status-donut-center strong{font-size:30px!important}.status-donut-center span{font-size:12px!important}.status-legend>div{font-size:13px!important;padding:7px 0!important}.status-legend strong{font-size:13px!important}.plans-list{gap:14px!important}.plan-usage-row{grid-template-columns:145px 1fr 48px!important;gap:12px!important}.plan-usage-name strong{font-size:14px!important}.plan-usage-name span{font-size:11px!important}.plan-usage-track{height:9px!important;background:#122f3a!important}.plan-usage-bar{background:linear-gradient(90deg,#28cdbb,#42e2d1)!important;box-shadow:0 0 18px rgba(46,211,194,.18)}.plan-usage-pct{font-size:13px!important}.quick-action-btn{min-height:46px!important;border-radius:10px!important;font-size:13px!important;font-weight:800!important;border:1px solid rgba(100,180,200,.18)!important;background:#0c2834!important;color:#eaf5f8!important}.quick-action-btn.primary{background:linear-gradient(135deg,#27cab8,#39dbc8)!important;color:#021b1c!important;border:0!important}.quick-action-btn.danger{background:rgba(255,75,102,.06)!important;color:#ff758b!important;border-color:rgba(255,75,102,.32)!important}.quick-action-btn:hover{transform:translateY(-1px)!important;filter:brightness(1.08)}
+
+.chart-card{padding:20px!important;margin:0 0 16px!important}.chart-head h2{font-size:19px!important}.chart-kicker{font-size:12px!important;color:#91a8b5!important}.chart-summary strong{font-size:18px!important}.chart-wrap{min-height:290px!important;background:linear-gradient(180deg,rgba(4,18,27,.38),rgba(4,18,27,.08))!important;border-radius:12px!important}
+.gp-today{padding:20px!important}.gp-today-head h2{font-size:18px!important}.gp-today-grid{gap:12px!important}.gp-today-item{background:rgba(255,255,255,.025)!important;border:1px solid rgba(255,255,255,.055)!important;border-radius:12px!important}.dashboard-brief .premium-intro,.attention{border-radius:14px!important;background:rgba(7,29,39,.92)!important;border:1px solid rgba(54,205,192,.12)!important}
+
+/* Cartões e formulários gerais mais limpos */
+.card{padding:20px!important}.card h2,.card h3{color:#f4fbfd!important}input,select,textarea{background:#071923!important;border-color:#173644!important;color:#eef7fb!important;border-radius:10px!important}input:focus,select:focus,textarea:focus{border-color:#2ed3c2!important;box-shadow:0 0 0 3px rgba(46,211,194,.09)!important}.btn{border-radius:10px!important}.btn-accent{background:linear-gradient(135deg,#28cdbb,#3ed9c7)!important;color:#041a1b!important;border:0!important;font-weight:800!important}.btn-ghost{background:#0a202b!important;border-color:#1a3a47!important;color:#dceaf0!important}
+
+@media (max-width:1280px){.wrap{margin-left:220px!important;padding:22px!important}.side-nav{width:204px!important}.stats{grid-template-columns:repeat(3,1fr)!important}.dashboard-insights{grid-template-columns:1fr 1fr!important}.quick-actions-insight{grid-column:1/-1!important}}
+@media (max-width:900px){.wrap{margin-left:0!important;padding:16px!important}.stats{grid-template-columns:1fr 1fr!important}.dashboard-insights{grid-template-columns:1fr!important}.quick-actions-insight{grid-column:auto!important}.executive-welcome h2{font-size:28px!important}}
+@media (max-width:560px){.stats{grid-template-columns:1fr!important}.executive-welcome{align-items:flex-start!important}.executive-welcome h2{font-size:25px!important}.dashboard-insight-card{padding:16px!important}.status-insight-body{grid-template-columns:125px 1fr!important}.status-donut{width:122px!important;height:122px!important}}
+
+/* =========================================================
+   GESTOR PRO — VISUAL PREMIUM V4
+   Ajustes finais para aproximar do modelo aprovado:
+   - painel usa toda a largura útil
+   - resumo rápido lateral removido
+   - menu lateral mais largo e legível
+   - cards e textos maiores
+   - gráfico mais compacto
+   ========================================================= */
+
+/* Libera a coluna direita e mantém o resumo dentro do conteúdo principal */
+.gp-today-panel{display:none!important}
+.wrap{margin-right:18px!important;max-width:none!important}
+
+/* O painel principal fica mais limpo, como no modelo de referência */
+#todaySection,.dashboard-brief{display:none!important}
+
+/* Menu lateral mais confortável em monitores grandes/Full HD */
+@media (min-width:1281px){
+  .side-nav{
+    width:244px!important;
+    left:0!important;
+    top:0!important;
+    bottom:0!important;
+    transform:none!important;
+    max-height:none!important;
+    height:100vh!important;
+    border-radius:0!important;
+    padding:18px 14px!important;
+    overflow-y:auto!important;
+  }
+  .side-nav-brand{height:62px!important;padding:0 10px 16px!important;margin-bottom:8px!important}
+  .side-nav-brand-mark-real,.side-nav-brand-mark{width:42px!important;height:42px!important;flex:0 0 42px!important}
+  .side-nav-brand-name{display:block!important;font-size:18px!important}
+  .menu-group-label{display:block!important;font-size:10.5px!important;margin:16px 10px 8px!important}
+  .nav-item{
+    width:100%!important;
+    min-width:0!important;
+    height:47px!important;
+    min-height:47px!important;
+    padding:0 13px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:12px!important;
+    font-size:14.5px!important;
+    text-align:left!important;
+  }
+  .nav-text{display:block!important;font-size:14px!important}
+  .nav-icon{font-size:18px!important;min-width:22px!important}
+  .nav-item::after{display:none!important}
+  .wrap{
+    width:auto!important;
+    margin:0 18px 0 264px!important;
+    padding:22px 18px 54px!important;
+  }
+}
+
+/* Cabeçalho e números principais com mais presença */
+#overviewSection{padding:14px 18px!important;margin-bottom:14px!important}
+.executive-welcome{padding:10px 2px 18px!important}
+.executive-welcome h2{font-size:36px!important}
+.executive-welcome p{font-size:16px!important}
+.stats{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin-bottom:18px!important}
+.stat{min-height:132px!important;padding:19px!important}
+.stat-label{font-size:12.5px!important;letter-spacing:.04em!important}
+.stat-value{font-size:34px!important}
+.stat-detail{font-size:12.5px!important;line-height:1.45!important}
+
+/* Cards preferidos pelo usuário: maiores, mais fáceis de ler e equilibrados */
+.dashboard-insights{
+  grid-template-columns:1.05fr 1.22fr .86fr!important;
+  gap:16px!important;
+  margin:0 0 18px!important;
+}
+.dashboard-insight-card{min-height:300px!important;padding:24px!important}
+.insight-head h2{font-size:22px!important;line-height:1.2!important}
+.insight-head p{font-size:13.5px!important;line-height:1.45!important;margin-top:6px!important}
+.status-insight-body{margin-top:20px!important;gap:22px!important}
+.status-donut{width:168px!important;height:168px!important}
+.status-donut-center strong{font-size:34px!important}
+.status-donut-center span{font-size:13px!important}
+.status-legend>div{font-size:14.5px!important;padding:9px 0!important}
+.status-legend strong{font-size:14.5px!important}
+.legend-dot{width:11px!important;height:11px!important}
+.plans-list{gap:18px!important;margin-top:24px!important}
+.plan-usage-row{grid-template-columns:150px 1fr 52px!important;gap:14px!important}
+.plan-usage-name strong{font-size:15.5px!important}
+.plan-usage-name span{font-size:12.5px!important;margin-top:4px!important}
+.plan-usage-track,.plan-usage-bar{height:10px!important}
+.plan-usage-pct{font-size:14.5px!important}
+.quick-actions-grid{gap:12px!important;margin-top:22px!important}
+.quick-action-btn{min-height:50px!important;font-size:14px!important;border-radius:11px!important}
+
+/* Receita mais compacta para não empurrar o restante do painel para baixo */
+.chart-card{padding:21px!important;margin-bottom:18px!important}
+.chart-head h2{font-size:21px!important}
+.chart-kicker{font-size:13px!important}
+.chart-summary strong{font-size:19px!important}
+.chart-wrap,.home-chart .chart-wrap{height:245px!important;min-height:245px!important}
+
+/* Cartões seguintes mantêm a mesma linguagem visual */
+.card{border-radius:15px!important}
+.agenda-card,.delinquency-card{padding:21px!important}
+
+/* Ajuste progressivo para notebooks, sem voltar ao menu minúsculo cedo demais */
+@media (min-width:1101px) and (max-width:1280px){
+  .side-nav{width:210px!important;left:0!important;top:0!important;bottom:0!important;transform:none!important;height:100vh!important;border-radius:0!important;padding:14px 10px!important;overflow-y:auto!important}
+  .side-nav-brand-name,.nav-text{display:block!important}
+  .menu-group-label{display:block!important;font-size:9.5px!important}
+  .nav-item{width:100%!important;height:44px!important;min-height:44px!important;padding:0 10px!important;display:flex!important;justify-content:flex-start!important;gap:9px!important;font-size:13px!important}
+  .nav-item::after{display:none!important}
+  .wrap{margin:0 12px 0 224px!important;padding:18px 12px 48px!important}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .dashboard-insights{grid-template-columns:1fr 1fr!important}
+  .quick-actions-insight{grid-column:1/-1!important}
+  .quick-actions-grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important}
+}
+
+/* =========================================================
+   GESTOR PRO — PREMIUM V5 / layout igual ao modelo aprovado
+   ========================================================= */
+@media (min-width:1281px){
+  .wrap{margin-left:258px!important;padding:18px 22px 42px!important}
+  .side-nav{width:236px!important}
+}
+#overviewSection{min-height:68px!important;padding:11px 16px!important}
+.executive-welcome{padding:6px 2px 14px!important}
+.executive-welcome h2{font-size:32px!important}
+.executive-welcome p{font-size:15px!important}
+.stats{gap:12px!important;margin-bottom:14px!important}
+.stat{min-height:112px!important;padding:16px 18px!important}
+.stat-value{font-size:31px!important}
+
+/* O trio principal aparece imediatamente abaixo dos KPIs, como na referência */
+.dashboard-insights{grid-template-columns:1.08fr 1.25fr .9fr!important;gap:14px!important;margin-bottom:14px!important}
+.dashboard-insight-card{min-height:250px!important;padding:19px!important}
+.insight-head h2{font-size:20px!important}.insight-head p{font-size:12.5px!important}
+.status-donut{width:145px!important;height:145px!important}
+.status-insight-body{margin-top:14px!important}
+.plans-list{margin-top:18px!important;gap:13px!important}
+.quick-actions-grid{margin-top:17px!important;gap:9px!important}
+.quick-action-btn{min-height:44px!important}
+
+/* Gráfico + clientes recentes na mesma linha */
+.dashboard-lower-grid{display:grid!important;grid-template-columns:minmax(0,1.35fr) minmax(360px,.75fr)!important;gap:14px!important;align-items:stretch!important;margin-bottom:16px!important}
+.dashboard-lower-grid .chart-card{margin:0!important;height:100%!important;min-width:0!important}
+.dashboard-lower-grid .chart-wrap{height:235px!important;min-height:235px!important}
+.dashboard-recent-card{background:linear-gradient(180deg,rgba(7,28,38,.96),rgba(5,22,31,.97));border:1px solid rgba(54,205,192,.17);border-radius:15px;box-shadow:var(--gp-shadow);padding:20px;min-width:0}
+.recent-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.recent-card-head h2{font-size:19px;margin:0;color:#fff}.recent-card-head p{font-size:12px;color:#93aab7;margin:5px 0 0}
+.recent-view-all{border:1px solid rgba(54,205,192,.22);background:#0a202b;color:#eaf5f8;border-radius:9px;padding:8px 11px;cursor:pointer;white-space:nowrap}
+.dashboard-client-preview-list{margin-top:5px}
+.dashboard-client-preview-row{display:grid!important;grid-template-columns:minmax(130px,1.4fr) .8fr 1fr auto!important;align-items:center!important;gap:9px!important;padding:10px 3px!important;border-bottom:1px solid rgba(255,255,255,.055)!important;cursor:pointer}
+.dashboard-client-preview-main{display:flex;align-items:center;gap:9px;min-width:0}.dashboard-client-preview-main .avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#22cdb9,#288ed7);font-weight:800;color:white;flex:0 0 auto}.dashboard-client-preview-main b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dashboard-client-preview-main small{display:block;color:#8fa7b4;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dashboard-client-preview-cell span{display:none}.dashboard-client-preview-cell b{font-size:12px;font-weight:600;color:#c9d9df}.dashboard-client-preview-row .badge{font-size:10.5px;white-space:nowrap}
+
+/* Conteúdo secundário fica depois da dobra inicial */
+#agendaSection{margin-top:4px!important}
+
+/* Menu com a mesma leitura visual do modelo */
+.side-nav-brand-name{font-weight:800!important}.nav-item{font-weight:650!important}.partner-nav-cta{margin-bottom:14px!important}
+
+@media (max-width:1280px){
+  .dashboard-lower-grid{grid-template-columns:1fr!important}
+  .dashboard-client-preview-row{grid-template-columns:1.4fr .8fr 1fr auto!important}
+}
+@media (max-width:760px){
+  .dashboard-client-preview-row{grid-template-columns:1fr auto!important}.dashboard-client-preview-cell{display:none!important}
+}
+
+/* =========================================================
+   GESTOR PRO — V6 CORRIGIDA
+   Refinamento visual do topo SEM alterar HTML/JS funcional.
+   ========================================================= */
+#overviewSection{
+  min-height:72px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  padding:12px 16px!important;
+  background:linear-gradient(180deg,rgba(6,24,34,.90),rgba(5,21,30,.86))!important;
+  border:1px solid rgba(66,211,198,.16)!important;
+  border-radius:14px!important;
+  box-shadow:0 12px 34px rgba(0,0,0,.16)!important;
+}
+#overviewSection .title-row{display:flex!important;align-items:center!important;gap:11px!important}
+#overviewSection .logo-mark{width:42px!important;height:42px!important;min-width:42px!important;border-radius:11px!important}
+#overviewSection .title-row h1{font-size:20px!important;letter-spacing:-.02em!important}
+#overviewSection .subtitle{font-size:12.5px!important;color:#8faab6!important;margin-top:3px!important}
+#overviewSection .datetime-stack{display:flex!important;align-items:center!important;gap:10px!important}
+#overviewSection .datetime{min-height:42px!important;display:flex!important;align-items:center!important;padding:0 13px!important;border-radius:9px!important;background:#0a202c!important;border:1px solid rgba(255,255,255,.06)!important;color:#c3d3da!important}
+#overviewSection .account-chip{min-height:42px!important;padding:5px 9px!important;border-radius:10px!important;background:#0a202c!important;border:1px solid rgba(255,255,255,.07)!important}
+#overviewSection .account-avatar{width:32px!important;height:32px!important;border-radius:9px!important;background:linear-gradient(135deg,#2dd2bd,#319df4)!important}
+
+.executive-welcome{padding:8px 2px 16px!important;align-items:center!important}
+.executive-welcome h2{font-size:36px!important;line-height:1.05!important;letter-spacing:-.04em!important;margin-bottom:7px!important}
+.executive-welcome p{font-size:15.5px!important;color:#a9bdc7!important}
+.executive-new-client{min-height:44px!important;padding:0 20px!important;border-radius:10px!important;font-size:13px!important}
+
+/* Cards superiores mais próximos da referência, sem tocar na lógica */
+.stats{gap:14px!important}
+.stat{min-height:126px!important;padding:18px!important;border-radius:14px!important}
+.stat-label{font-size:12px!important;color:#a8bbc4!important}
+.stat-value{font-size:31px!important;line-height:1!important;margin-top:8px!important}
+.stat-detail{font-size:11.5px!important}
+
+@media(max-width:900px){
+  #overviewSection{align-items:flex-start!important;flex-direction:column!important}
+  #overviewSection .datetime-stack{width:100%!important;justify-content:space-between!important}
+  .executive-welcome{align-items:flex-start!important;gap:12px!important;flex-direction:column!important}
+}
+
+/* =========================================================
+   GESTOR PRO — V8 POLIMENTO DE LEGIBILIDADE
+   Apenas apresentação: nenhuma regra de negócio é alterada.
+   ========================================================= */
+@media (min-width:901px){
+  .dashboard-insight-card{padding:22px!important}
+  .insight-head h2{font-size:21px!important}
+  .insight-head p{font-size:13.5px!important;color:#a8bbc4!important}
+  .status-legend>div{font-size:14px!important}
+  .status-legend strong{font-size:14px!important}
+  .plan-usage-name strong{font-size:14.5px!important}
+  .plan-usage-name span{font-size:12px!important;color:#9fb3bd!important}
+  .plan-usage-pct{font-size:14px!important}
+  .quick-action-btn{min-height:48px!important;font-size:14px!important}
+}
+
+/* Clientes recentes: leitura mais clara e linhas com área de clique confortável */
+.recent-card-head h2{font-size:20px!important}
+.recent-card-head p{font-size:13px!important;color:#a1b5bf!important}
+.recent-view-all{font-size:12.5px!important;font-weight:700!important}
+.dashboard-client-preview-row{min-height:54px!important;padding:11px 6px!important}
+.dashboard-client-preview-main .avatar{width:36px!important;height:36px!important;font-size:13px!important}
+.dashboard-client-preview-main b{font-size:13.5px!important}
+.dashboard-client-preview-main small{font-size:11.5px!important;color:#9eb1ba!important}
+.dashboard-client-preview-cell b{font-size:12.5px!important}
+.dashboard-client-preview-row .badge{font-size:11px!important;padding:6px 9px!important}
+
+/* Ficha do cliente: maior, mais legível e sem alterar eventos/JS */
+#clientProfileModal .client-profile-box{width:min(960px,calc(100vw - 36px))!important;border-radius:20px!important}
+#clientProfileModal .client-profile-hero{padding:25px 28px!important}
+#clientProfileModal .client-profile-top .avatar{width:54px!important;height:54px!important;font-size:17px!important}
+#clientProfileModal .client-profile-title h2{font-size:27px!important;line-height:1.15!important}
+#clientProfileModal .client-profile-title p{font-size:14px!important;margin-top:6px!important}
+#clientProfileModal .client-profile-close{font-size:28px!important;width:38px!important;height:38px!important;border-radius:9px!important}
+#clientProfileModal .client-profile-body{padding:22px 28px 24px!important;max-height:76vh!important}
+#clientProfileModal .client-profile-kpis{gap:12px!important;margin-bottom:18px!important}
+#clientProfileModal .client-profile-kpi{padding:16px!important;min-height:66px!important}
+#clientProfileModal .client-profile-kpi span{font-size:11px!important;letter-spacing:.055em!important}
+#clientProfileModal .client-profile-kpi b{font-size:16px!important;margin-top:7px!important}
+#clientProfileModal .client-profile-grid{gap:14px!important}
+#clientProfileModal .client-profile-card{padding:18px!important}
+#clientProfileModal .client-profile-card h3{font-size:15.5px!important;margin-bottom:13px!important}
+#clientProfileModal .client-profile-line{font-size:14px!important;line-height:1.45!important;padding:10px 0!important}
+#clientProfileModal .client-profile-line span{color:#a7bac3!important}
+#clientProfileModal .client-profile-history{gap:8px!important;max-height:240px!important}
+#clientProfileModal .client-profile-history-item{font-size:13.5px!important;line-height:1.4!important;padding:12px 13px!important}
+#clientProfileModal .client-profile-history-item small{font-size:11.5px!important;margin-top:5px!important}
+#clientProfileModal .client-profile-actions{gap:10px!important;margin-top:19px!important}
+#clientProfileModal .client-profile-actions .btn{min-height:43px!important;font-size:14px!important;font-weight:750!important;padding:0 17px!important;border-radius:10px!important}
+
+/* Botões: consistência de interação visual */
+.quick-action-btn,.recent-view-all,#clientProfileModal .btn{transition:transform .16s ease,filter .16s ease,border-color .16s ease!important}
+.quick-action-btn:hover,.recent-view-all:hover,#clientProfileModal .btn:hover{transform:translateY(-1px)!important;filter:brightness(1.08)!important}
+.quick-action-btn:focus-visible,.recent-view-all:focus-visible,#clientProfileModal .btn:focus-visible{outline:2px solid rgba(66,226,209,.8)!important;outline-offset:2px!important}
+
+@media(max-width:760px){
+  #clientProfileModal .client-profile-box{width:calc(100vw - 16px)!important}
+  #clientProfileModal .client-profile-hero{padding:18px!important}
+  #clientProfileModal .client-profile-body{padding:17px!important}
+  #clientProfileModal .client-profile-title h2{font-size:22px!important}
+  #clientProfileModal .client-profile-line{font-size:13px!important}
+}
+
+
+/* v9 — painel interativo e menu Web mais enxuto */
+.gp-web-version .status-donut,
+.gp-web-version .status-legend > div,
+.gp-web-version .plan-usage-row{cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease}
+.gp-web-version .status-donut:hover{transform:scale(1.025);box-shadow:0 0 0 4px rgba(53,214,194,.07)}
+.gp-web-version .status-legend > div:hover,
+.gp-web-version .plan-usage-row:hover{transform:translateY(-2px);background:rgba(53,214,194,.055);border-color:rgba(53,214,194,.22)}
+.gp-web-version .status-legend > div:active,
+.gp-web-version .plan-usage-row:active{transform:translateY(0)}
+.gp-web-version .status-insight .insight-head p::after,
+.gp-web-version .plans-insight .insight-head p::after{content:none!important}
+.gp-web-version .dashboard-client-preview-row{transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.gp-web-version .dashboard-client-preview-row:hover{transform:translateY(-2px);border-color:rgba(53,214,194,.25);background:rgba(53,214,194,.045)}
+
+/* v10.2 - filtros do painel realmente clicáveis */
+.insight-filter-hint{appearance:none;border:0;background:transparent;color:#6fe0d2;font:800 12px inherit;padding:0;margin:0 0 0 3px;cursor:pointer;text-decoration:none}
+.insight-filter-hint:hover{color:#a3fff3;text-decoration:underline}
+.status-donut,.status-legend>div,.plan-usage-row{cursor:pointer}
+.status-legend>div,.plan-usage-row{border-radius:8px;transition:background .15s ease,transform .15s ease}
+.status-legend>div:hover,.plan-usage-row:hover{background:rgba(52,211,194,.06);transform:translateX(2px)}
+/* ===== Gestor PRO v11 · Painel Inteligente ===== */
+html.gp-platform-web #todaySection{display:block!important;margin:0 0 14px!important}
+html.gp-platform-web #gpTodayAgendaBtn{display:none!important}
+.gp-intelligence-grid{display:grid;grid-template-columns:1.05fr 1.45fr .9fr;gap:12px;margin:12px 0 16px}
+.gp-intel-card{border:1px solid rgba(69,214,198,.16);background:linear-gradient(145deg,rgba(8,35,45,.92),rgba(5,25,34,.94));border-radius:16px;padding:17px;min-width:0}
+.gp-intel-card h3{margin:0 0 5px;font-size:15px;color:#f2fffd}.gp-intel-card p{margin:0;color:#8fa8b0;font-size:11px;line-height:1.5}
+.gp-health-row{display:flex;align-items:center;gap:15px;margin-top:14px}.gp-health-ring{--score:100;width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#35d6c2 calc(var(--score)*1%),rgba(255,255,255,.07) 0);position:relative;flex:none}.gp-health-ring:after{content:"";position:absolute;inset:8px;border-radius:50%;background:#09232c}.gp-health-ring strong{z-index:1;font-size:21px;color:#eafffb}.gp-health-copy b{display:block;color:#dffffa;font-size:13px;margin-bottom:4px}.gp-health-copy span{font-size:10.5px;color:#8fa8b0;line-height:1.45;display:block}
+.gp-projection-list{display:grid;gap:8px;margin-top:13px}.gp-projection-row{display:grid;grid-template-columns:54px 1fr auto;gap:9px;align-items:center;font-size:10.5px}.gp-projection-row span{color:#91aab2}.gp-projection-track{height:7px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden}.gp-projection-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,#20bcae,#46e3d1)}.gp-projection-row b{font-size:11px;color:#e9fffc}
+.gp-tool-actions{display:grid;gap:8px;margin-top:13px}.gp-tool-actions button{width:100%;border:1px solid rgba(73,211,197,.18);background:rgba(18,66,76,.45);color:#dffbf7;border-radius:10px;padding:10px 11px;font-weight:800;font-size:10.5px;cursor:pointer;text-align:left}.gp-tool-actions button:hover{background:rgba(37,143,143,.28);border-color:rgba(73,211,197,.35)}
+.gp-priority-list{display:grid;gap:7px;margin-top:10px}.gp-priority-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.045);cursor:pointer}.gp-priority-row:hover{border-color:rgba(53,214,194,.25)}.gp-priority-row b{font-size:10.5px;color:#eafffb}.gp-priority-row span{font-size:9.5px;color:#9bb0b7}.gp-priority-row em{font-style:normal;font-size:9px;font-weight:900;color:#ffc15a;white-space:nowrap}
+@media(max-width:1150px){.gp-intelligence-grid{grid-template-columns:1fr 1fr}.gp-intel-card.gp-tools{grid-column:1/-1}.gp-tool-actions{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.gp-intelligence-grid{grid-template-columns:1fr}.gp-intel-card.gp-tools{grid-column:auto}.gp-tool-actions{grid-template-columns:1fr}}
+
+/* v10 — Ficha do cliente no Web Mobile: rolagem interna + fundo travado */
+@media (max-width:760px){
+  html.gp-platform-web.gp-client-profile-open,
+  html.gp-platform-web.gp-client-profile-open body{
+    overflow:hidden!important;
+    overscroll-behavior:none!important;
+  }
+  html.gp-platform-web #clientProfileModal{
+    position:fixed!important;
+    inset:0!important;
+    height:100dvh!important;
+    padding:8px!important;
+    box-sizing:border-box!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+    overscroll-behavior:none!important;
+    touch-action:none!important;
+  }
+  html.gp-platform-web #clientProfileModal .client-profile-box{
+    width:100%!important;
+    max-width:100%!important;
+    height:calc(100dvh - 16px)!important;
+    max-height:calc(100dvh - 16px)!important;
+    margin:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    overflow:hidden!important;
+    border-radius:18px!important;
+  }
+  html.gp-platform-web #clientProfileModal .client-profile-hero{
+    flex:0 0 auto!important;
+    padding:16px!important;
+    position:relative!important;
+    z-index:2!important;
+  }
+  html.gp-platform-web #clientProfileModal .client-profile-body{
+    flex:1 1 auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    overscroll-behavior:contain!important;
+    touch-action:pan-y!important;
+    padding:16px 16px 125px!important;
+    scrollbar-gutter:stable!important;
+  }
+  html.gp-platform-web #clientProfileModal .client-profile-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    margin-top:18px!important;
+  }
+  html.gp-platform-web #clientProfileModal .client-profile-actions .btn{
+    width:100%!important;
+    min-height:48px!important;
+  }
+}
+
+
+/* ===== Gestor PRO v12 · Ficha do cliente Mobile (scroll isolado de verdade) ===== */
+@media (max-width:760px){
+  html.gp-platform-web.gp-client-profile-open,
+  html.gp-platform-web.gp-client-profile-open body{
+    width:100%!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+    overscroll-behavior:none!important;
+  }
+
+  html.gp-platform-web.gp-client-profile-open body{
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    top:var(--gp-profile-lock-top,0px)!important;
+    height:100dvh!important;
+    touch-action:none!important;
+  }
+
+  html.gp-platform-web.gp-client-profile-open .gp-mobile-nav,
+  html.gp-platform-web.gp-client-profile-open .gp-mobile-more,
+  html.gp-platform-web.gp-client-profile-open .gp-mobile-more-backdrop{
+    display:none!important;
+  }
+
+  html.gp-platform-web #clientProfileModal{
+    position:fixed!important;
+    inset:0!important;
+    z-index:100200!important;
+    width:100vw!important;
+    height:100dvh!important;
+    padding:0!important;
+    margin:0!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    overscroll-behavior:contain!important;
+    touch-action:pan-y!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    background:rgba(0,8,13,.78)!important;
+  }
+
+  html.gp-platform-web #clientProfileModal .client-profile-box{
+    position:relative!important;
+    width:calc(100vw - 16px)!important;
+    max-width:calc(100vw - 16px)!important;
+    height:auto!important;
+    max-height:none!important;
+    min-height:0!important;
+    margin:8px auto calc(18px + env(safe-area-inset-bottom,0px))!important;
+    display:block!important;
+    overflow:visible!important;
+    border-radius:18px!important;
+  }
+
+  html.gp-platform-web #clientProfileModal .client-profile-hero{
+    position:sticky!important;
+    top:0!important;
+    z-index:5!important;
+    padding:16px!important;
+    border-radius:18px 18px 0 0!important;
+    backdrop-filter:blur(14px)!important;
+  }
+
+  html.gp-platform-web #clientProfileModal .client-profile-body{
+    display:block!important;
+    min-height:0!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+    padding:16px 16px 20px!important;
+    touch-action:pan-y!important;
+  }
+
+  html.gp-platform-web #clientProfileModal .client-profile-actions{
+    position:sticky!important;
+    bottom:0!important;
+    z-index:6!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:10px!important;
+    margin:18px -16px -20px!important;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))!important;
+    background:linear-gradient(180deg,rgba(9,29,39,.82),rgba(9,29,39,.98) 26%)!important;
+    border-top:1px solid rgba(78,219,202,.12)!important;
+    backdrop-filter:blur(14px)!important;
+  }
+
+  html.gp-platform-web #clientProfileModal .client-profile-actions .btn{
+    width:100%!important;
+    min-width:0!important;
+    min-height:48px!important;
+    padding:0 10px!important;
+    font-size:13px!important;
+    white-space:normal!important;
+  }
+}

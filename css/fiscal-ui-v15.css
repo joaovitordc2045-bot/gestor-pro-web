@@ -1,0 +1,83 @@
+/* Fiscal V15 — leitura clean + rascunho visível em desktop e mobile */
+#fiscalModal{
+  --fiscal-text-weight:400;
+  --fiscal-medium-weight:500;
+  --fiscal-title-weight:600;
+}
+
+/* Menos negrito: leitura mais leve sem perder hierarquia */
+#fiscalModal,
+#fiscalModal p,
+#fiscalModal span,
+#fiscalModal input,
+#fiscalModal select,
+#fiscalModal textarea{font-weight:var(--fiscal-text-weight)}
+#fiscalModal h2,
+#fiscalModal h3,
+#fiscalModal h4,
+#fiscalModal .fiscal-panel-title,
+#fiscalModal .fiscal-section-title{font-weight:var(--fiscal-title-weight)}
+#fiscalModal label,
+#fiscalModal label>span,
+#fiscalModal .fiscal-form-grid label,
+#fiscalModal .fiscal-field label,
+#fiscalModal .fiscal-preview-grid small,
+#fiscalModal .fiscal-draft-details small{font-weight:var(--fiscal-medium-weight)}
+#fiscalModal b,
+#fiscalModal strong{font-weight:var(--fiscal-title-weight)}
+#fiscalModal .fiscal-tab,
+#fiscalModal .btn,
+#fiscalModal button{font-weight:var(--fiscal-medium-weight)}
+#fiscalModal .fiscal-coming,
+#fiscalModal .fiscal-dev-badge,
+#fiscalModal .fiscal-draft-topline>span,
+#fiscalModal .fiscal-saved-badge{font-weight:600}
+
+/* Ações de preparação sempre fáceis de encontrar */
+#fiscalModal .fiscal-issue-actions{display:flex;align-items:center;justify-content:space-between;gap:18px}
+#fiscalModal .fiscal-issue-buttons{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+#fiscalModal #fiscalSaveDraftBtn{min-width:132px}
+#fiscalModal #fiscalSaveDraftBtn:disabled{opacity:.45;cursor:not-allowed;filter:saturate(.55)}
+
+/* Prévia mais leve */
+#fiscalModal .fiscal-preview-grid b{font-weight:500}
+#fiscalModal .fiscal-preview-head h4{font-weight:600}
+#fiscalModal .fiscal-preview-head small,
+#fiscalModal .fiscal-preview-grid small{opacity:.72}
+#fiscalModal .fiscal-preview-foot{opacity:.68}
+
+/* Histórico: não transformar cada informação em destaque */
+#fiscalModal .fiscal-draft-topline>b{font-weight:600}
+#fiscalModal .fiscal-draft-copy>strong{font-weight:500}
+#fiscalModal .fiscal-draft-meta b,
+#fiscalModal .fiscal-draft-details b{font-weight:500}
+#fiscalModal .fiscal-draft-kpis span{font-weight:500}
+#fiscalModal .fiscal-draft-kpis b{font-weight:600}
+#fiscalModal .fiscal-draft-actions button{font-weight:500}
+
+/* Mais conforto de leitura em PC */
+@media (min-width:901px){
+  #fiscalModal .fiscal-form-grid label>span{font-size:14px}
+  #fiscalModal .fiscal-form-grid input,
+  #fiscalModal .fiscal-form-grid select,
+  #fiscalModal .fiscal-form-grid textarea{font-size:15.5px}
+  #fiscalModal .fiscal-preview-grid b{font-size:15.5px}
+  #fiscalModal .fiscal-preview-grid span{font-size:13.5px}
+}
+
+/* Mobile: mesma lógica, sem botões espremidos ou texto pequeno */
+@media (max-width:900px){
+  #fiscalModal .fiscal-issue-actions{align-items:stretch;flex-direction:column;gap:12px}
+  #fiscalModal .fiscal-issue-actions>span{font-size:13px;line-height:1.45}
+  #fiscalModal .fiscal-issue-buttons{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:9px}
+  #fiscalModal .fiscal-issue-buttons .btn{width:100%;min-width:0;min-height:44px}
+  #fiscalModal .fiscal-form-grid label>span{font-size:13.5px}
+  #fiscalModal .fiscal-form-grid input,
+  #fiscalModal .fiscal-form-grid select,
+  #fiscalModal .fiscal-form-grid textarea{font-size:15px}
+  #fiscalModal .fiscal-draft-copy>strong{font-size:14px}
+}
+
+@media (max-width:520px){
+  #fiscalModal .fiscal-issue-buttons{grid-template-columns:1fr}
+}

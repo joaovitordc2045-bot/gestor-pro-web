@@ -1,0 +1,43 @@
+/* Fiscal V14 — histórico fiscal / rascunhos, mantendo padrão clean e legível */
+#fiscalModal .fiscal-preview-actions{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding-top:17px;border-top:1px solid rgba(110,231,215,.13)}
+#fiscalModal .fiscal-preview-actions>span{font-size:13.5px;line-height:1.45;opacity:.78}
+#fiscalModal .fiscal-draft-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:16px 0 8px}
+#fiscalModal .fiscal-draft-kpis>div{display:grid;gap:7px;padding:17px 18px;border:1px solid rgba(110,231,215,.15);border-radius:14px;background:rgba(7,29,38,.48)}
+#fiscalModal .fiscal-draft-kpis span{font-size:12.5px;font-weight:800;opacity:.72}
+#fiscalModal .fiscal-draft-kpis b{font-size:21px;line-height:1.2}
+#fiscalModal .fiscal-draft-list{display:grid;gap:12px;margin-top:14px}
+#fiscalModal .fiscal-draft-card{border:1px solid rgba(110,231,215,.16);border-radius:15px;background:rgba(7,29,38,.48);overflow:hidden}
+#fiscalModal .fiscal-draft-main{display:flex;gap:14px;padding:17px 18px}
+#fiscalModal .fiscal-draft-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:0 0 auto;background:rgba(45,212,191,.11);border:1px solid rgba(110,231,215,.16);font-size:18px}
+#fiscalModal .fiscal-draft-copy{min-width:0;flex:1;display:grid;gap:5px}
+#fiscalModal .fiscal-draft-topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#fiscalModal .fiscal-draft-topline>b{font-size:16px;line-height:1.3}
+#fiscalModal .fiscal-draft-topline>span{font-size:10.5px;font-weight:900;letter-spacing:.05em;color:#f4c55e;border:1px solid rgba(244,197,94,.28);background:rgba(244,197,94,.08);padding:5px 8px;border-radius:999px}
+#fiscalModal .fiscal-draft-copy>strong{font-size:14.5px;line-height:1.35}
+#fiscalModal .fiscal-draft-copy>p{font-size:13px;line-height:1.45;margin:0;opacity:.72;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fiscalModal .fiscal-draft-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:3px}
+#fiscalModal .fiscal-draft-meta span{font-size:12.5px;opacity:.72}
+#fiscalModal .fiscal-draft-meta b{font-size:13px;opacity:1}
+#fiscalModal .fiscal-draft-actions{display:flex;justify-content:flex-end;gap:8px;padding:0 18px 16px}
+#fiscalModal .fiscal-draft-actions button{border:1px solid rgba(110,231,215,.18);background:transparent;color:inherit;border-radius:9px;padding:8px 12px;font-weight:800;cursor:pointer}
+#fiscalModal .fiscal-draft-actions button:hover{background:rgba(110,231,215,.08)}
+#fiscalModal .fiscal-draft-actions button.danger{border-color:rgba(248,113,113,.22);color:#fca5a5}
+#fiscalModal .fiscal-draft-details{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 18px;border-top:1px solid rgba(110,231,215,.12);background:rgba(3,18,25,.30)}
+#fiscalModal .fiscal-draft-details>div{display:grid;gap:4px;padding:12px;border:1px solid rgba(110,231,215,.10);border-radius:11px}
+#fiscalModal .fiscal-draft-details small{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;opacity:.58}
+#fiscalModal .fiscal-draft-details b{font-size:14px;line-height:1.35}
+#fiscalModal .fiscal-draft-details span{font-size:12.5px;line-height:1.4;opacity:.72}
+#fiscalModal .fiscal-draft-empty{margin-top:8px}
+@media(max-width:900px){
+ #fiscalModal .fiscal-preview-actions{align-items:stretch;flex-direction:column}
+ #fiscalModal .fiscal-preview-actions .btn{width:100%}
+ #fiscalModal .fiscal-draft-kpis{grid-template-columns:1fr}
+ #fiscalModal .fiscal-draft-kpis>div{padding:15px 16px}
+ #fiscalModal .fiscal-draft-kpis b{font-size:19px}
+ #fiscalModal .fiscal-draft-main{padding:15px}
+ #fiscalModal .fiscal-draft-topline{align-items:flex-start;flex-direction:column;gap:6px}
+ #fiscalModal .fiscal-draft-copy>p{white-space:normal}
+ #fiscalModal .fiscal-draft-actions{display:grid;grid-template-columns:1fr 1fr 1fr;padding:0 15px 15px}
+ #fiscalModal .fiscal-draft-actions button{padding:10px 8px}
+ #fiscalModal .fiscal-draft-details{grid-template-columns:1fr;padding:14px 15px}
+}

@@ -1,0 +1,9 @@
+/* Gestor PRO Fiscal V25 — validação XSD oficial */
+.fiscal-xsd-pill{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:5px 12px;border:1px solid rgba(148,163,184,.24);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.01em;white-space:nowrap;color:#aab8c3;background:rgba(15,23,42,.18)}
+.fiscal-xsd-pill.valid{color:#74f3d2;border-color:rgba(45,212,191,.46);background:rgba(13,148,136,.08)}
+.fiscal-xsd-pill.invalid{color:#f5c177;border-color:rgba(245,158,11,.42);background:rgba(245,158,11,.07)}
+.fiscal-xsd-pill.not_executed{color:#aab8c3}
+.fiscal-v25-note{margin-top:12px;padding:14px 16px;border:1px solid rgba(45,212,191,.23);border-radius:12px;background:rgba(15,118,110,.045);font-size:13px;line-height:1.55;color:#aebfc8}
+.fiscal-v25-note b{color:#d8e8ec;font-weight:700}
+.fiscal-xsd-errors{display:block;max-width:520px;color:#e8b978;line-height:1.45;text-align:right}
+@media(max-width:900px){.fiscal-xsd-errors{text-align:left;max-width:none}.fiscal-xsd-pill{width:100%}}

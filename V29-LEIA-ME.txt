@@ -1,0 +1,16 @@
+GESTOR PRO FISCAL V29 - PRONTIDAO PARA ASSINATURA XML
+
+1) Execute web/sql-v29-prontidao-assinatura.sql no SQL Editor do Supabase.
+2) Publique web/supabase/functions/nfse-preparar-assinatura/index.ts com o nome exato: nfse-preparar-assinatura
+3) Publique a pasta Web da V29.
+
+A V29 NÃO assina a DPS e NÃO transmite para a SEFIN.
+Ela cria uma barreira de segurança que só libera a próxima etapa quando:
+- DPS estruturada;
+- auditoria XML aprovada;
+- XSD oficial validado;
+- A1 validado;
+- chave privada confirmada;
+- CNPJ do A1 compatível;
+- certificado dentro da validade;
+- Id da infDPS disponível para a Reference da XMLDSig.
